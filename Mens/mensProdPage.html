@@ -41,6 +41,7 @@
 
         #products{
             display:grid;
+            /* height: 200px; */
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: auto;
             gap:10px 20px;
@@ -48,7 +49,7 @@
 
         #products>div>img{
             width:100%;
-            height:auto;
+            height:80%;
         }
         #products>div>h2{
             color: #4f5362;
@@ -508,19 +509,10 @@
             let price=document.createElement("h4");
             price.innerText=element.price;
 
-            let addToCart=document.createElement("button");
-            addToCart.innerText="Add to Cart";
-            addToCart.addEventListener("click",function(){
-                if(addToCartFunc(element.productID)===true){
-                    alert("Product Added Succesfully");
-                    cartLS.push(element);
-                    localStorage.setItem("cart-page",JSON.stringify(cartLS));
-                }else{
-                    alert("Product already in the Cart");
-                }
+            img.addEventListener("click",function(){
+                window.location.href="https://www.google.com/"  //[Vinayak, Add your link here]
             })
-
-            product.append(img,name,catagory,price,addToCart);
+            product.append(img,name,catagory,price);
             productsCont.append(product);
         })
     }
@@ -538,13 +530,5 @@
         }
     })
 
-    function addToCartFunc(id){
-        for(let i=0; i<cartLS.length;i++)
-        {
-            if(cartLS[i].productID===id){
-                return false;
-            }
-        }
-        return true;
-    }
+    
 </script>
