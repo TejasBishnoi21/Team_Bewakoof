@@ -6,10 +6,10 @@ mensData = [
         size: "X,XX,XXL",
         productID: "men1",
         catagory: "T-Shirt",
-        img: "https://www.bewakoof.com/p/killmonger-half-sleeve-t-shirt",
+        img: "https://www.bewakoof.com/p/killmonger-half-sleeve-t-shirt"
       },
         {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: "Men's Olive Killmonger Graphic Printed Oversized T-shirt ",
         price: "1299 ",
         size: "X,XX,XXL",
