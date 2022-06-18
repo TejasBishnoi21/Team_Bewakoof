@@ -41,6 +41,7 @@
 
         #products{
             display:grid;
+            /* height: 200px; */
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: auto;
             gap:10px 20px;
@@ -48,7 +49,7 @@
 
         #products>div>img{
             width:100%;
-            height:auto;
+            height:80%;
         }
         #products>div>h2{
             color: #4f5362;
@@ -186,25 +187,23 @@
     <div id="contentWrap">
         <div id="filters">
             
-                <select id="price">
+                <select id="priceFilter">
                     <option value="">Price</option>
                     <option value="low-high">Low to High</option>
                     <option value="high-low">High to Low</option>
                 </select>
             
-                <select id="size">
-                    <option value="">Size</option>
-                    <option value="XXS">XXS</option>
+                <select id="sizeFilter">
+                    <option value="Size">Size</option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                     <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
                 </select>
             
-                <select id="brand">
-                    <option value="">Brand</option>
+                <select id="brandFilter">
+                    <option value="Brand">Brand</option>
                     <option value="Bewakoof">Bewakoof</option>
                     <option value="OFFICIAL MARVEL MERCHANDISE">Marvel</option>
                     <option value="OFFICIAL DC COMICS MERCHANDISE">DC</option>
@@ -226,7 +225,7 @@
         brand: "Bewakoof",
         name: "Men's Black Killmonger Graphic Printed T-shirt",
         price: "999",
-        size: "X,XX,XXL",
+        size: "S",
         productID: "men1",
         catagory: "T-Shirt",
         img: "https://images.bewakoof.com/t540/killmonger-half-sleeve-t-shirt-509349-1655101044-1.jpg"
@@ -235,7 +234,7 @@
         brand: "Bewakoof",
         name: "Men's Olive Killmonger Graphic Printed Oversized T-shirt ",
         price: "1299 ",
-        size: "X,XX,XXL",
+        size: "S",
         productID: "men2",
         catagory: "T-Shirt",
         img: "https://images.bewakoof.com/t540/killmonger-oversized-fit-t-shirt-509357-1655101091-1.jpg"
@@ -244,7 +243,7 @@
         brand: "Bewakoof ",
         name: "Men's Purple Love For All Graphic Printed Oversized T-shirt",
         price: "1299 ",
-        size: "X,XX,XXL",
+        size: "S",
         productID: "men3",
         catagory: "T-Shirt",
         img: "https://images.bewakoof.com/t540/love-for-all-oversized-fit-t-shirt-510692-1655308520-1.jpg"
@@ -253,7 +252,7 @@
         brand: "Bewakoof",
         name: "Men's Black Kalyug Age of Machines Graphic Printed T-shirt ",
         price: "999 ",
-        size: "X,XX,XXL",
+        size: "S",
         productID: "men4",
         catagory: "T-Shirt",
         img: "https://images.bewakoof.com/t320/men-s-black-kalyug-age-of-machines-graphic-printed-t-shirt-509633-1655211307-1.jpg"
@@ -261,35 +260,35 @@
  {
         brand: "Bewakoof",
         name: "Men's Black Placket Print Shirt ",
-        price: " 1399",
+        price: "S",
         size: "X,XX,XXL",
         productID: "men5",
         catagory: "Shirt",
         img: "https://images.bewakoof.com/t320/black-print-on-placket-full-sleeve-shirt-352183-1648191503-1.jpg"
       },
  {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: "Winter Moss Full Sleeve Shirt ",
         price: "1399",
-        size: "X,XX,XXL",
+        size: "XS",
         productID: "men6",
         catagory: "Shirt",
         img: "https://images.bewakoof.com/t320/winter-moss-full-sleeve-shirt-352208-1637225217-1.jpg"
       },
  {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: " Men's Relaxed Fit Grey Solid Short Kurta",
         price: "999 ",
-        size: "X,XX,XXL",
+        size: "XS",
         productID: "men7",
         catagory: "Shirt",
         img: "https://images.bewakoof.com/t540/men-s-relaxed-fit-grey-solid-short-kurta-302584-1637854988-1.jpg"
       },
  {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: "Men's Relaxed Fit White Solid Short Kurta ",
         price: "999",
-        size: "X,XX,XXL",
+        size: "XS",
         productID: "men8",
         catagory: "Shirt",
         img: "https://images.bewakoof.com/t540/men-s-relaxed-fit-white-solid-short-kurta-302579-1637855150-1.jpg"
@@ -298,7 +297,7 @@
         brand: "Bewakoof",
         name: "Men's Pink All Over Printed Boxers ",
         price: "599 ",
-        size: "X,XX,XXL",
+        size: "XS",
         productID: "men9",
         catagory: "Boxer",
         img: "https://images.bewakoof.com/t320/men-all-over-printed-boxer-481796-1652272705-1.jpg"
@@ -307,7 +306,7 @@
         brand: "Bewakoof",
         name: "Men's Black All Over Flower Printed Boxers ",
         price: "599",
-        size: "X,XX,XXL",
+        size: "XS",
         productID: "men10",
         catagory: "Boxer",
         img: "https://images.bewakoof.com/t540/men-all-over-printed-boxer-481818-1652272540-1.jpg"
@@ -316,7 +315,7 @@
         brand: "Bewakoof",
         name: "Men's Blue All Over Printed Boxers",
         price: "599",
-        size: "X,XX,XXL",
+        size: "M",
         productID: "men11",
         catagory: "Boxer",
         img: "https://images.bewakoof.com/t540/men-all-over-printed-boxer-481801-1652273043-1.jpg"
@@ -325,16 +324,16 @@
         brand: "Bewakoof",
         name: "Men's Black Self Design Boxers ",
         price: "599",
-        size: "X,XX,XXL",
+        size: "M",
         productID: "men12",
         catagory: "Boxer",
         img: "https://images.bewakoof.com/t540/men-all-over-printed-boxer-481791-1652273211-1.jpg"
       },
  {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: "Men's Plain Color Block Cargo Joggers ",
         price: "1899 ",
-        size: "X,XX,XXL",
+        size: "M",
         productID: "men13",
         catagory: "Joggers",
         img: "https://images.bewakoof.com/t540/men-s-plain-color-block-cargo-joggers-337793-1644992404-1.jpg"
@@ -343,7 +342,7 @@
         brand: "PLAY by BEWAKOOF",
         name: "Men's Black Training Vest ",
         price: "849",
-        size: "X,XX,XXL",
+        size: "M",
         productID: "men14",
         catagory: "Vest",
         img: "https://images.bewakoof.com/t540/men-s-black-training-slim-fit-vest-455042-1649928457-1.jpg"
@@ -352,16 +351,16 @@
         brand: "PLAY by BEWAKOOF",
         name: "Men's White Training Vest ",
         price: "849",
-        size: "X,XX,XXL",
+        size: "M",
         productID: "men15",
         catagory: "Vest",
         img: "https://images.bewakoof.com/t540/men-s-white-training-slim-fit-vest-455047-1649928566-1.jpg"
       },
  {
-        brand: " Bewakoof",
+        brand: "Bewakoof",
         name: "Men's Blue Marvel Moon Knight Graphic Printed T-shirt ",
         price: "999 ",
-        size: "X,XX,XXL",
+        size: "L",
         productID: "men16",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/marvel-s-moon-knight-half-sleeve-t-shirt-483814-1648618777-1.jpg"
@@ -370,7 +369,7 @@
         brand: "Bewakoof",
         name: "Men's Blue Busy Doing Nothing T-shirt",
         price: "1099",
-        size: "X,XX,XXL",
+        size: "L",
         productID: "men17",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/men-s-blue-busy-doing-nothing-t-shirt-287587-1651248151-1.jpg"
@@ -379,7 +378,7 @@
         brand: "Bewakoof",
         name: "Men's Black Witcher Ability T-shirt ",
         price: "799 ",
-        size: "X,XX,XXL",
+        size: "L",
         productID: "men18",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/witcher-ability-half-sleeve-t-shirt-390553-1640087155-1.jpg"
@@ -388,43 +387,43 @@
         brand: "Bewakoof ",
         name: "Elite Ninja Round Neck Vest For Men's ",
         price: "750",
-        size: "X,XX,XXL",
+        size: "L",
         productID: "men19",
         catagory: "Vest",
         img: "https://images.bewakoof.com/t540/elite-ninja-round-neck-vest-for-men-s-386574-1649687755-1.jpg"
       },
  {
-        brand: "OFFICIAL MARVEL MERCHANDISE ",
+        brand: "OFFICIAL MARVEL MERCHANDISE",
         name: "Men's White Mech Strike Chest Printed Oversized Fit T-shirt ",
         price: "999 ",
-        size: "X,XX,XXL",
+        size: "L",
         productID: "men20",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/men-s-white-iron-man-grafitti-oversized-t-shirt-466330-1649266187-1.jpg"
       },
 {
-        brand: "OFFICIAL DC COMICS MERCHANDISE ",
+        brand: "OFFICIAL DC COMICS MERCHANDISE",
         name: "Men's Grey Batman Logo Blueprint Hoodie T-shirt ",
         price: "1199",
-        size: "X,XX,XXL",
+        size: "XL",
         productID: "men22",
         catagory: "Hoodie",
         img: "https://images.bewakoof.com/t540/batman-logo-blueprint-476492-1647932976-1.jpg"
       },
 {
         brand: "Bewakoof ",
-        name: "Men's Blue Busy Doing Nothing T-shirt ",
+        name: "Men's Blue Busy Doing Nothing T-shirt",
         price: "1099",
-        size: "X,XX,XXL",
+        size: "XL",
         productID: "men23",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/men-s-blue-busy-doing-nothing-t-shirt-287587-1651248151-1.jpg"
       },
 {
         brand: "Bewakoof ",
-        name: "Men's White T-shirt ",
+        name: "Men's White T-shirt",
         price: "1199",
-        size: "X,XX,XXL",
+        size: "XL",
         productID: "men24",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/white-full-sleeve-t-shirt-1093-1637995974-1.jpg"
@@ -433,7 +432,7 @@
         brand: "Bewakoof ",
         name: " Men's Blue T-shirt",
         price: "999",
-        size: "X,XX,XXL",
+        size: "XL",
         productID: "men25",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-115-1646674268-1.jpg"
@@ -442,43 +441,43 @@
         brand: " Bewakoof",
         name: "The Traveller Full Sleeve T-Shirt ",
         price: "1299",
-        size: "X,XX,XXL",
+        size: "XL",
         productID: "men26",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/the-traveller-full-sleeve-t-shirt-276528-1638212427-1.jpg"
       },
 {
-        brand: " Bewakoof",
-        name: "Men's Birthday Yellow T-shirt ",
+        brand: "Bewakoof",
+        name: "Men's Birthday Yellow T-shirt",
         price: "699",
-        size: "X,XX,XXL",
+        size: "XXL",
         productID: "men27",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/men-s-birthday-yellow-t-shirt-444171-1648642208-1.jpg"
       },
 {
-        brand: "Bewakoof ",
-        name: " Sunset Block Half Sleeve T-Shirt",
+        brand: "Bewakoof",
+        name: "Sunset Block Half Sleeve T-Shirt",
         price: "1099",
-        size: "X,XX,XXL",
+        size: "XXL",
         productID: "men28",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/sunset-block-half-sleeve-t-shirt-271582-1637854985-1.jpg"
       },
 {
-        brand: "Bewakoof ",
+        brand: "Bewakoof",
         name: " Men's Blue T-shirt",
         price: "1199",
-        size: "X,XX,XXL",
+        size: "XXL",
         productID: "men29",
         catagory: "T-shirt",
         img: "https://images.bewakoof.com/t540/navy-blue-full-sleeve-t-shirt-1092-1637995354-1.jpg"
       },
 {
-        brand: " Bewakoof",
+        brand: "Bewakoof",
         name: "Men's Pink Kalyug Age of Machines Graphic Printed Hoodie T-shirt",
         price: "1299",
-        size: "X,XX,XXL",
+        size: "XXL",
         productID: "men30",
         catagory: "Hoodie",
         img: "https://images.bewakoof.com/t540/men-s-pink-kalyug-age-of-machines-graphic-printed-hoodie-t-shirt-509638-1655211282-1.jpg"
@@ -487,13 +486,13 @@
     
 
     let productsCont = document.getElementById("products");
-    let filter=document.getElementById("filter");
-    let cartLS;
-    if(JSON.parse(localStorage.getItem("cart-page"))==null){
-        cartLS=[];
-    }else{
-        cartLS=JSON.parse(localStorage.getItem("cart-page"))
-    }
+
+    let sortCatg=document.getElementById("filter");
+
+    let sortBrd=document.getElementById("brandFilter");
+
+    let sortSize=document.getElementById("sizeFilter");
+    
 
     function displayProducts(mensData){
         productsCont.innerHTML="";
@@ -508,43 +507,51 @@
             let price=document.createElement("h4");
             price.innerText=element.price;
 
-            let addToCart=document.createElement("button");
-            addToCart.innerText="Add to Cart";
-            addToCart.addEventListener("click",function(){
-                if(addToCartFunc(element.productID)===true){
-                    alert("Product Added Succesfully");
-                    cartLS.push(element);
-                    localStorage.setItem("cart-page",JSON.stringify(cartLS));
-                }else{
-                    alert("Product already in the Cart");
-                }
+            img.addEventListener("click",function(){
+                window.location.href="https://www.google.com/"  //[Vinayak, Add your link here]
             })
-
-            product.append(img,name,catagory,price,addToCart);
+            product.append(img,name,catagory,price);
             productsCont.append(product);
         })
     }
-    
     displayProducts(mensData);
 
-    filter.addEventListener("change",function(){
-        if(filter.value==="All"){
+    //[Function for Sort by Category-]
+    sortCatg.addEventListener("change",function(){
+        if(sortCatg.value==="All"){
             displayProducts(mensData);
         }else{
             let filtered=mensData.filter(function(element){
-                return element.catagory===filter.value;
+                return element.catagory===sortCatg.value;
             })
             displayProducts(filtered);
         }
     })
-
-    function addToCartFunc(id){
-        for(let i=0; i<cartLS.length;i++)
-        {
-            if(cartLS[i].productID===id){
-                return false;
-            }
+    //[Function for Sort by Brand-]
+    sortBrd.addEventListener("change",function(){
+        if(sortBrd.value==="Brand"){
+            displayProducts(mensData);
         }
-        return true;
-    }
+        else
+        {
+            let filteredBr=mensData.filter(function(element){
+                return element.brand===sortBrd.value;
+            })
+            displayProducts(filteredBr);
+        }
+    })
+    //[Function for Sort by Size-]
+    sortSize.addEventListener("change",function(){
+        if(sortSize.value==="Size"){
+            displayProducts(mensData);
+        }
+        else
+        {
+            let filteredSz=mensData.filter(function(element){
+                return element.size===sortSize.value;
+            })
+            displayProducts(filteredSz);
+        }
+    })
+    
 </script>
