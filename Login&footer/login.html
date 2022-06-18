@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+    body{
+        background-color:rgb(247, 230, 197);
+    }
+    #main{
+        /* border:1px solid red; */
+        margin-top:100px;
+        width:60%;
+        height:700px;
+        margin-left:20%;
+        margin-top:100px;
+        text-align: center;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    h1{
+        font-size:40px;
+        margin-top: 50px;
+        padding-top:30px;
+    }
+   
+    #link{
+        border:none;
+        background-color: white;
+        color:teal;
+        margin-bottom: 50px ;
+        font-size:20px
+    }
+    #login{
+        width:350px;
+        height:40px;
+        font-size:20px;
+    }
+   
+    .input-box{
+        margin:50px auto;
+        width:350px;
+        border-bottom:1px solid grey;
+    }
+    .input-box input{
+        width:380px;
+        border:none;
+        outline:none;
+        font-size:20px;
+        margin-top:50px;
+    }
+    .eye{
+        position:absolute;
+        top:54%;
+       font-size:20px;
+        transform:translateX(150px);
+    }
+    #hide1{
+        display:none;
+        
+    }
+</style>
+<body>
+    <div id="main">
+         <h1>
+                Log in to your account
+        </h1>
+        <form action="">
+           
+            <div class="input-box">
+                <input type="text" id="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="password" id="pass" placeholder="Password">
+               <span class="eye" onclick="myFun()">
+                
+                <i  id="hide1"  class="fa fa-eye" ></i>
+                <i  id="hide2" class="fa fa-eye-slash"></i>
+               </span>
+               
+            </div>
+           
+           
+          
+           <button id="link">Forgot Password? </button><br>
+
+              <button id="login">LOGIN</button>
+
+        </form>
+    </div>
+</body>
+</html>
+<script>
+        document.querySelector("form").addEventListener("submit", login);
+
+function login() {
+    event.preventDefault();
+    //  console.log('in')
+    let email = document.querySelector("#email").value;
+    let pass = document.querySelector("#pass").value;
+
+    // let user={
+    //     Email:email,
+    //     Pass:pass
+    // }
+
+    let arrFromLS = JSON.parse(localStorage.getItem("userdata"));
+    console.log(arrFromLS)
+    let flag = false;
+    for (let i = 0; i < arrFromLS.length;i++) {
+        if (email == arrFromLS[i].Email && pass == arrFromLS[i].Pass) {
+            flag = true;
+            // localStorage.setItem("logindata",JSON.stringify())
+        }
+
+    }
+    if (flag == true) {
+        window.location.href="navbar.html";
+    }
+    else {
+        alert('Invalid Password or Email')
+    }
+
+}
+    
+    
+  function myFun(){
+        let x= document.getElementById("pass")
+        let y= document.getElementById("hide1")
+        let z= document.getElementById("hide2")
+
+        if(x.type==='password'){
+            x.type='text';
+            y.style.display='block';
+            z.style.display='none';
+        }else{
+            x.type='password';
+            y.style.display='none';
+            z.style.display='block';
+        }
+  }
+
+</script>
