@@ -12,15 +12,23 @@
   //       jobArr=JSON.parse(localStorage.getItem("jobApplications"))
   //     }
 
+  let cancel=document.getElementById("cancel").addEventListener("click", cancelFunc);
+
+function cancelFunc(){
+  alert("You Clicked Cancel Icon")
+}
+
+
   function myFunction(event) {
     event.preventDefault();
 
     var address = {
       name: document.querySelector("#name").value,
       pinCode: document.querySelector("#pincode").value,
-      Flate: document.querySelector("#flateNO").value,
+      Flat: document.querySelector("#flatNO").value,
       City: document.querySelector("#city").value,
       State: document.querySelector("#state").value,
+
     };
 
     ArrayOfObj.push(address);
