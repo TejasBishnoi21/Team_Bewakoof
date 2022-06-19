@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Fashion Shopping for men,women,accessories-Bewakoof.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
+
+    <style>
+        #navbar{
+            width: 75%;
+            margin: auto;
+           display: flex;
+           justify-content: space-between;
+           margin-top: 10px;
+           align-items: center;
+        }
+        #navbar>div>p{
+            line-height: 2px;
+        }
+        #truck{
+            width:33% ;
+            margin-left: 57%;
+            margin-bottom: -100px;
+            margin-top: 100px;
+
+        }
+        #truck>div{
+
+            display: flex;
+            background-color: #FDD835;
+            justify-content: flex-end;
+            justify-content: space-between;
+            padding: 0px 9px 0px 9px;
+        }
+
+
+        #small{
+            display: flex;
+        }
+
+        #container{
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            
+        }
+        #left>div{
+            width: 90%;
+            border: 1px solid rgb(220, 218, 218);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 20px;
+            
+        }
+        #left{
+        width: 70%;}
+
+        #right{
+        width: 50%;}
+
+        #small>div:nth-child(1){
+            width: 280%;
+            
+            
+            
+        }
+        #indiv{
+            display: flex;
+            justify-content: space-around;
+        }
+        #indiv>button{
+            padding: 10px;
+            background-color: white;
+            border: none;
+        }
+
+        /* right section */
+
+        #ppdiv{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #pppdiv{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #ppppdiv{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #pppppdiv{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #totaldiv{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #totaldiv>:nth-child(2){
+            /* width: 3%; */
+            padding: 10px 30px 10px 30px;
+            margin-right: 80px;
+            background-color: rgb(10, 169, 169);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div><a href=""><img style="width:70% ;" src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg" alt=""></a></div>
+        <div> <p>Signed as</p>
+        <p>vinayak </p>
+     </div>
+        
+    </div>
+    <hr>
+
+    <div id="truck">
+       
+        <div>
+        <p>Save extra ₹80 with Tribe</p>
+        <p>>></p>
+        </div>
+        
+    </div>
+
+    <div id="container">
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let addcart=JSON.parse(localStorage.getItem("additem")) || []
+
+
+
+    // function displayname(addcart){
+    //     for(let)
+    //     document.querySelector("#navbar>div>p+p").innerText="vi"
+    // }
+
+   
+
+    let total=0;
+
+    displaytable(addcart)
+
+    if(addcart==""){
+      let bag=  document.querySelector("#left")
+
+      let div=document.createElement("div")
+      div.style.width="50%"
+      div.style.marginLeft="50px"
+      div.style.border="none"
+      div.style.display="block"
+      div.style.alignItems="center"
+    //   div.style.border="1px solid red"
+
+
+      let image=document.createElement("img")
+      image.setAttribute("src","https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png")
+      image.style.width="60%"
+
+      let p=document.createElement("p")
+      p.innerText="Nothing in the bag"
+      p.style.fontSize="24px"
+      p.style.marginLeft="40px"
+
+      let button=document.createElement("button")
+      button.innerText="Continue Shopping"
+      button.style.fontSize="22px"
+      button.style.color="rgb(10, 169, 169)"
+      button.style.backgroundColor="white"
+      button.style.border="1px solid rgb(10, 169, 169)"
+      button.style.padding="5px 20px 5px 20px"
+      button.style.borderRadius="5px"
+      button.style.marginLeft="15px"
+
+      let a=document.createElement("a")
+      a.setAttribute("href","")
+
+      button.append(a)
+
+      div.append(image,p,button)
+     bag.append(div)
+    }
+
+    
+
+    function displaytable(addcart){
+
+        addcart.forEach(function(elem,index){
+
+            let div=document.createElement("div")
+            div.setAttribute("id","small")
+
+            div1=document.createElement("div")
+
+            let p1=document.createElement("p")
+            p1.innerText=elem.name
+
+           
+
+            let p2=document.createElement("p")
+            p2.innerText="You save ₹90"
+            p2.style.color="green"
+
+
+            let h2=document.createElement("h2")
+            h2.innerText= elem.newprice || elem.price
+
+            if(elem.newprice==undefined){
+            total=total+elem.price
+           }else{total=total+elem.newprice}
+
+            
+
+
+          let select=document.createElement("select")
+
+          select.addEventListener("change",function(){
+           
+           
+           h2.innerText= quantfun(elem,select.value)
+
+           elem.newprice=quantfun(elem,select.value)
+
+             h2.innerText=newprice
+
+             elem.quant=select.value
+
+           localStorage.setItem("additem",JSON.stringify(addcart))
+
+           window.location.reload ()
+        
+          })
+         
+
+          let option=document.createElement("option")
+        option.innerText=elem.quant || 1
+
+        let option2=document.createElement("option")
+        option2.setAttribute("value","1")
+        option2.innerText=1
+
+        let option3=document.createElement("option")
+        option3.setAttribute("value","2")
+        option3.innerText=2
+
+
+        let option4=document.createElement("option")
+        option4.setAttribute("value","3")
+        option4.innerText=3
+
+
+        let option5=document.createElement("option")
+        option5.setAttribute("value","4")
+        option5.innerText=4
+
+
+        select.append(option,option2,option3,option4,option5)
+
+
+        let indiv=document.createElement("div")
+        indiv.setAttribute("id","indiv")
+
+        let button1=document.createElement("button")
+        button1.innerText="Remove"
+        button1.addEventListener("click",function(){
+            delfun(elem,index)
+        })
+
+
+        let button2=document.createElement("button")
+        button2.innerText="Move to wishlist"
+
+
+        indiv.append(button1,button2)
+
+
+
+
+
+
+            div1.append(p1,h2,p2,select,indiv)
+
+            div2=document.createElement("div")
+             
+            let image=document.createElement("img")
+            image.setAttribute("src",elem.img)
+            image.style.width="100%"
+
+            div2.append(image)
+
+
+            div.append(div1,div2)
+            document.querySelector("#left").append(div)
+
+           
+            
+
+        })
+    }  
+
+    function delfun(elem,index){
+        event.target
+        addcart.splice(index,1)
+         localStorage.setItem("additem",JSON.stringify(addcart))
+         window.location.reload()
+
+    }
+
+    let flag=false
+   function quantfun(elem,quant){
+  return newprice=elem.price*quant
+  
+     flag=true
+    
+   }
+    
+    // right section
+
+
+    let rdiv1=document.createElement("div")
+
+    let p3=document.createElement("p")
+            p3.innerText="Whistles! Get extra 10% Cashback on prepaid orders above Rs.699. Coupon code - OOF10."
+             p3.style.color="#2D2D2D2"
+             p3.style.border="1px solid rgb(220, 218, 218)"
+             p3.style.padding="10px"
+    let p4=document.createElement("p")
+          p4.innerText="Get upto Rs.200 cashback on orders above Rs.299 on Paytm Wallet and Paytm Postpaid"
+          p4.style.color="#2D2D2D2"
+             p4.style.border="1px solid rgb(220, 218, 218)"
+             p4.style.padding="10px"
+           
+     let p5=document.createElement("p")
+          p5.innerText="Whistles! Get extra 20% Cashback on prepaid orders above Rs.499. Coupon code - NEW20. Applicable for new customers only!"  
+          p5.style.color="#2D2D2D2"
+             p5.style.border="1px solid rgb(220, 218, 218)"
+             p5.style.padding="10px"
+          
+     let rdiv2=document.createElement("div")
+
+
+     let input=document.createElement("input")
+        input.setAttribute("type","text")
+        input.setAttribute("placeholder","Have a Coupon / Referral")
+        input.style.backgroundColor="#acf4f4"
+        input.style.border="none"
+        input.style.width="60%"
+        input.style.padding="7px"
+
+  
+    let button=document.createElement("button")
+        button.innerText="Redeem >>"
+        button.style.color="#42A2A2"
+        button.style.backgroundColor="#acf4f4"
+        button.style.border="none"
+        button.style.width="30%"
+        button.style.padding="7px"
+        button.addEventListener("click",function(){
+    promofun(input.value,total)
+})
+
+function promofun(code,total){
+    if(code=="OOF10"){
+    //   let  comm=total%30
+    //   console.log(total)
+    //    console.log(total/3)
+         if(total>=699){
+            pppp1.innerText=total/10
+            total=total-(total/10)
+         
+           
+
+        ppppp1.innerText=total
+        prch.innerText=total
+        
+         }
+       
+        
+
+    }
+    
+    else if(code=="NEW20"){
+
+        if(total>=499){
+            pppp1.innerText=total/5
+            total=total-(total/5)
+
+           
+
+        ppppp1.innerText=total
+        prch.innerText=total
+        
+         }
+
+    }
+    
+    else{ ppppp1.innerText=total}
+}
+
+
+
+
+  let rdiv3=document.createElement("div")
+
+  let h=document.createElement("h3")
+   h.innerText="PRICE SUMMARY"
+
+
+
+   let ppdiv=document.createElement("div")
+     ppdiv.setAttribute("id","ppdiv")
+
+   let pp=document.createElement("p")
+   pp.innerText="Total MRP (Incl. of taxes)"
+
+   let pp1=document.createElement("p")
+   pp1.innerText=total || 0
+
+   ppdiv.append(pp,pp1)
+
+
+
+   let pppdiv=document.createElement("div")
+     pppdiv.setAttribute("id","pppdiv")
+
+   let ppp=document.createElement("p")
+   ppp.innerText="Delivery Fee "
+
+   let ppp1=document.createElement("p")
+   ppp1.innerText="FREE"
+ppp1.style.color="green"
+   pppdiv.append(ppp,ppp1)
+
+
+
+
+   let ppppdiv=document.createElement("div")
+     ppppdiv.setAttribute("id","ppppdiv")
+
+   let pppp=document.createElement("p")
+   pppp.innerText="Bag Discount  "
+
+   let pppp1=document.createElement("p")
+   pppp1.innerText="0"
+
+   ppppdiv.append(pppp,pppp1)
+
+
+
+   
+   let pppppdiv=document.createElement("div")
+     pppppdiv.setAttribute("id","pppppdiv")
+
+   let ppppp=document.createElement("p")
+   ppppp.innerText="Subtotal   "
+
+   let ppppp1=document.createElement("p")
+   ppppp1.innerText=total
+
+   pppppdiv.append(ppppp,ppppp1)
+
+
+
+
+   rdiv3.append(h,ppdiv,pppdiv,ppppdiv,pppppdiv)
+
+
+        rdiv2.append(input,button)
+
+         
+        // document.querySelector("#right").append(p3,p4,p5,rdiv2,rdiv3)
+
+
+let totaldiv=document.createElement("div")
+totaldiv.setAttribute("id","totaldiv")
+  
+let prcdiv=document.createElement("div")
+let prcp=document.createElement("p")
+prcp.innerText="total"
+let prch=document.createElement("p")
+prch.innerText=total || 0
+
+prcdiv.append(prcp,prch)
+
+let adddiv=document.createElement("div")
+adddiv.innerText="ADDRESS"
+
+let adda=document.createElement("a")
+adda.setAttribute("href","data.html")
+
+adddiv.append(adda)
+
+totaldiv.append(prcdiv,adddiv)
+
+
+document.querySelector("#right").append(p3,p4,p5,rdiv2,rdiv3,totaldiv)
+
+
+    
+</script>
