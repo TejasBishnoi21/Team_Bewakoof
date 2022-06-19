@@ -117,9 +117,9 @@
 <body>
 
     <div id="navbar">
-        <div><a href=""><img style="width:70% ;" src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg" alt=""></a></div>
-        <div> <p>Signed as</p>
-        <p>vinayak </p>
+        <div><a href="index.html"><img style="width:70% ;" src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg" alt=""></a></div>
+        <div> <p>Signed in as</p>
+        <p id="vin">Hello</p>
      </div>
         
     </div>
@@ -559,6 +559,16 @@ function address (total){
 }
 
 
+let buyer=JSON.parse(localStorage.getItem("buyer"))||[];
+displayBuyer(buyer)
 
+function displayBuyer(buyer){
+    for(let i=buyer.length-1;i>=0;i--)
+    {
+        document.querySelector("#vin").innerText="Hello"+" "+buyer[i].email;
+        break;
+    }
+}
+ 
     
 </script>

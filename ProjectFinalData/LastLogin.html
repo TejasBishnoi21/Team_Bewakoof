@@ -351,6 +351,8 @@ p{
 </body>
 
 <script>
+let buyer=JSON.parse(localStorage.getItem("buyer"))||[];
+
 
 
 function myfunction(){
@@ -362,18 +364,22 @@ function myfunction(){
         if(elem.number===document.getElementById("num").value)
         {   
             alert("login successful")
+            buyer.push(elem);
+            localStorage.setItem("buyer", JSON.stringify(buyer))
             flag=true;
         }
         
     })
+
     if(flag==true){
         window.location.href="loginotp.html"
-
     }
     else{
         alert("You seem to be a new user sign up")
         window.location.href="signUp.html"
     }
 }
+
+
 </script>
 </html>
