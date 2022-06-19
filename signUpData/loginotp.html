@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginOTP.css">
+    <title>OTP LOGIN</title>
+</head>
+<body>
+    <div id="loginOTP">
+        <div>
+            <h2>Verify with OTP</h2>
+            <hr>
+
+            <p>Enter OTP</p>
+            <input type="text">
+            <p>Resent OTP</p>
+            <p><a href="">Login with password </a><span> > </span> </p>
+            <button>Login</button>
+
+        </div>
+   
+   
+    </div>
+
+</body>
+</html>
+<script>
+    let but=document.querySelector('button');
+
+  
+    but.addEventListener("click",fuct);
+
+    function fuct(){
+        let val=document.querySelector("input").value;
+
+        if(val.length===4){
+            window.location.href="../Linking/index.html";
+        }else{
+            alert("enter valid otp");
+        }
+        
+    }
+</script>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/*---------------------------------------------------------------Top Bar Css Start------------------------------------------*/
+#top{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(218, 220, 225,0.9);
+    /* background-attachment: fixed; */
+}
+#top>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 70px;
+
+}
+#top>div:first-child>ol{
+    display: flex;
+    list-style: none;
+   align-items: center;
+   justify-content: center;
+}
+#top>div:first-child>ol>li{
+    padding: 10px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+#top>div:last-child{
+    display: flex;
+    width: 20%;
+    align-items: flex-end;
+    margin-left: 240px;
+
+}
+#top>div:last-child>ol{
+    display: flex;
+    list-style: none;
+
+}
+#top>div:last-child>ol>li{
+    padding: 10px;
+   margin-bottom: -3px;
+   font-family: monospace;
+   letter-spacing: 1px;
+}
+/*---------------------------------------------------------------Top Bar Css End------------------------------------------*/
+/*---------------------------------------------------------------Nav Bar Css Start------------------------------------------*/
+#nav{
+    width: 100%;
+    height: 53px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    background-attachment: fixed;
+    background-color: white;
+}
+#nav>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 80px;
+}
+ #nav>div:first-child>a>img{
+    margin-top: 15px;
+    width: 60%;
+} 
+#nav>div:first-child>p{
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-top: 16px;
+    font-family: montserrat, sans-serif;
+}
+#nav>div:first-child>p:hover{
+    border-bottom: 5px solid gold;
+    margin-bottom: -1px;
+}
+#nav>div:last-child{
+    display: flex;
+    width: 50%;
+    align-items: flex-end;
+}
+#nav>div:last-child> .searcbar{
+    width: 60%;
+    height: 35px;
+    border: 1px solid red;
+    margin-right:  25px ;
+    margin-bottom:10px;
+    border-radius: 5px 5px 5px 5px;
+
+    background: #eaeaea;
+    outline: none;
+    border: none;
+}
+#nav>div:last-child> .searcbar>span{
+   margin-left: 9px;
+}
+.searcbar>input{
+    width: 85%;
+    height: 90%;
+    outline: none;
+    border: none;
+    background: #eaeaea;
+    margin-top: 2px;
+   margin-left: 4px;
+}
+#nav>div:last-child>div:last-child{
+    display: flex;
+    /* margin-bottom: 18px; */
+    align-items: center;
+}
+#nav>div:last-child>div:last-child>p{
+    font-size: 20px;
+    /* margin-top: 7px; */
+}
+#vericleLine{
+   margin-right: 15px; 
+  margin-bottom: 9px;
+
+}
+#vericleLine+p{
+ color: rgb(51, 110, 110);
+ /* margin-left: -13px; */
+margin-bottom: 10px;
+}
+#vericleLine+p+img{
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+#vericleLine+p+img+img{
+padding: 5px;
+font-size: 20px;
+
+margin-bottom: 8px;
+}
+
+
+       /* ----------------continue Mail Start---------------- */
+    body{
+        background-color:rgb(247, 230, 197);
+    }
+    #main{
+        /* border:1px solid red; */
+        margin-top:150px;
+        width:60%;
+        height:700px;
+        margin-left:20%;
+        margin-top:80px;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    h1{
+        font-size:40px;
+        margin-top: 50px;
+        padding-top:30px;
+    }
+   
+    #link{
+        border:none;
+        background-color: white;
+        color:teal;
+        margin-bottom: 50px ;
+        font-size:20px
+    }
+    #login{
+        width:350px;
+        height:40px;
+        font-size:20px;
+    }
+   
+    .input-box{
+        margin:50px auto;
+        width:350px;
+        border-bottom:1px solid grey;
+    }
+    .input-box input{
+        width:380px;
+        border:none;
+        outline:none;
+        font-size:20px;
+        margin-top:50px;
+    }
+    .eye{
+        position:absolute;
+        top:62%;
+       font-size:20px;
+        transform:translateX(150px);
+    }
+    #hide1{
+        display:none;
+        
+    }
+</style>
+<body>
+        
+
+    <div id="top">
+        <div>
+            <ol>
+                <li>Offer</li>
+                <li>Fanbook</li>
+                <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+                <li>Download App</li>
+                <li>TriBe Membership</li>
+            </ol>
+        </div>
+        <div>
+            <ol>
+                <li>Contact Us</li>
+                <li>Track Order</li>
+            </ol>
+        </div>
+    </div>
+    <!---------------------------------------------------------------Top Bar End------------------------------------------>
+    <!--------------------------------------------------------------------Navbar Start------------------------------------>
+    <div id="nav">
+        <!------------------------------------------------------------------------Left Side ------------------------------->
+        <div>
+            <a href="index.js"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                    alt="Bewakoof"></a>
+            <p><a href="#" style="text-decoration:none ; color: black;"> Men</a> </p>
+            <p><a href="#" style="text-decoration:none ;color: black;"> Women</a> </p>
+            <p><a href="#" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+        </div>
+        <!------------------------------------------------------------------------Right Side ------------------------------->
+        <div>
+            <div class="searcbar">
+                <span class="fa-solid fa-magnifying-glass"></span>
+                <input type="text" placeholder="Search by products, catergory or collection ">
+            </div>
+            <div>
+                <p id="vericleLine"> | </p>
+                <p> Login </p>
+                <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
+                <img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+        
+
+    <!-- =========continue HTML Log in Page====== -->
+    <div id="main">
+         <h1>
+                Log in to your account
+        </h1>
+        <form action="">
+           
+            <div class="input-box">
+                <input type="text" id="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="password" id="pass" placeholder="Password">
+               <span class="eye" onclick="myFun()">
+                
+                <i  id="hide1"  class="fa fa-eye" ></i>
+                <i  id="hide2" class="fa fa-eye-slash"></i>
+               </span>
+               
+            </div>
+           
+           
+          
+           <button id="link">Forgot Password? </button><br>
+
+              <button id="login">LOGIN</button>
+
+        </form>
+    </div>
+</body>
+</html>
+<script>
+        document.querySelector("form").addEventListener("submit", login);
+  let arr2=[];
+function login() {
+    event.preventDefault();
+    //  console.log('in')
+    let email = document.querySelector("#email").value;
+    let pass = document.querySelector("#pass").value;
+
+    let user={
+        Email:email,
+        Pass:pass
+    }
+    arr2.push(user);
+
+    let arrFromLS = JSON.parse(localStorage.getItem("userData1"));
+    // console.log(arrFromLS)
+    let flag = false;
+    for (let i = 0; i < arrFromLS.length;i++) {
+        if (email == arrFromLS[i].email && pass == arrFromLS[i].password) {
+            flag = true;
+            localStorage.setItem("logindata",JSON.stringify(arr2))
+        }
+
+    }
+    if (flag == true) {
+        window.location.href="../Linking/index.html";
+    }
+    else {
+        alert('Invalid Password or Email')
+    }
+
+}
+    
+    
+  function myFun(){
+        let x= document.getElementById("pass")
+        let y= document.getElementById("hide1")
+        let z= document.getElementById("hide2")
+
+        if(x.type==='password'){
+            x.type='text';
+            y.style.display='block';
+            z.style.display='none';
+        }else{
+            x.type='password';
+            y.style.display='none';
+            z.style.display='block';
+        }
+  }
+
+</script>

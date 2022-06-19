@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<style>
-
-*{
+    <title>signup</title>
+    <script src="https://kit.fontawesome.com/3126724da1.js"></script>
+    <style>
+       *{
     margin: 0%;
     padding: 0%;
 }
@@ -26,7 +23,7 @@
     display: flex;
     width: 60%;
     margin-left: 70px;
-
+    
 }
 #top>div:first-child>ol{
     display: flex;
@@ -44,12 +41,12 @@
     width: 20%;
     align-items: flex-end;
     margin-left: 240px;
-
+   
 }
 #top>div:last-child>ol{
     display: flex;
     list-style: none;
-
+ 
 }
 #top>div:last-child>ol>li{
     padding: 10px;
@@ -65,7 +62,6 @@
     border-bottom: 1px solid lightgray;
     display: flex;
     background-attachment: fixed;
-    background-color: white;
 }
 #nav>div:first-child{
     display: flex;
@@ -102,7 +98,7 @@
     margin-right:  25px ;
     margin-bottom:10px;
     border-radius: 5px 5px 5px 5px;
-
+    
     background: #eaeaea;
     outline: none;
     border: none;
@@ -131,7 +127,7 @@
 #vericleLine{
    margin-right: 15px; 
   margin-bottom: 9px;
-
+ 
 }
 #vericleLine+p{
  color: rgb(51, 110, 110);
@@ -146,73 +142,66 @@ margin-bottom: 10px;
 #vericleLine+p+img+img{
 padding: 5px;
 font-size: 20px;
-
 margin-bottom: 8px;
 }
 
 
-       /* ----------------continue Mail Start---------------- */
-    body{
-        background-color:rgb(247, 230, 197);
-    }
-    #main{
-        /* border:1px solid red; */
-        margin-top:150px;
-        width:60%;
-        height:700px;
-        margin-left:20%;
-        margin-top:80px;
-        margin-bottom: 20px;
-        text-align: center;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-    h1{
-        font-size:40px;
-        margin-top: 50px;
-        padding-top:30px;
-    }
+#main{
+    background-color: #fff9e2;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    height: 500px;
+    display: flex;
+}
+#first{
+    width: 40%;
+    height: 100%;
+    margin-left: 70px;
+}
+#first>img{
+    width: 80%;
+    height: 100%;
+}
+#second{
+    width: 40%;
+    background-color: white;
+    margin-left: 60px;
+    
+}
+#second-2{
+    margin: auto;
+    margin-left: 60px;
+}
+#second-2>div{
+    margin-top: 50px;
+    width: 100%;
+}
+#second-2>button{
+    margin-top: 50px;
+    width: 80%;
+    background-color: gray;
+    height: 50px;
+    border: transparent;
+    border-radius: 8px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    border:1px solid grey;
+}
+input{
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
    
-    #link{
-        border:none;
-        background-color: white;
-        color:teal;
-        margin-bottom: 50px ;
-        font-size:20px
-    }
-    #login{
-        width:350px;
-        height:40px;
-        font-size:20px;
-    }
-   
-    .input-box{
-        margin:50px auto;
-        width:350px;
-        border-bottom:1px solid grey;
-    }
-    .input-box input{
-        width:380px;
-        border:none;
-        outline:none;
-        font-size:20px;
-        margin-top:50px;
-    }
-    .eye{
-        position:absolute;
-        top:62%;
-       font-size:20px;
-        transform:translateX(150px);
-    }
-    #hide1{
-        display:none;
-        
-    }
-</style>
-<body>
-        
+} 
 
-    <div id="top">
+    </style>
+</head>
+<body>
+       <!---------------------------------------------------------------Top Bar Start------------------------------------------>
+       <div id="top">
         <div>
             <ol>
                 <li>Offer</li>
@@ -254,87 +243,69 @@ margin-bottom: 8px;
             </div>
         </div>
     </div>
-        
 
-    <!-- =========continue HTML Log in Page====== -->
     <div id="main">
-         <h1>
-                Log in to your account
-        </h1>
-        <form action="">
-           
-            <div class="input-box">
-                <input type="text" id="email" placeholder="Email">
+        <div id="first">
+            <img src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png" alt="">
+        </div>
+        <div id="second">
+            <div id="second-2">
+                <h1>Sign up</h1>
+                <h3>Hi new buddy, let's get you started with Bewakoofi!</h3>
+                <div>
+                    <input type="text" id="name" placeholder="Name">
+                </div>
+                <div>
+                    <input type="number" id="num" placeholder="Mobile">
+                </div>
+                <div>
+                    <input type="text" id="email" placeholder="Email Id">
+                </div>
+                <div>
+                    <input type="password" id="pass" placeholder="Password">
+                </div>
+                <button onclick="myfunction()">PROCEED</button>
             </div>
-            <div class="input-box">
-                <input type="password" id="pass" placeholder="Password">
-               <span class="eye" onclick="myFun()">
-                
-                <i  id="hide1"  class="fa fa-eye" ></i>
-                <i  id="hide2" class="fa fa-eye-slash"></i>
-               </span>
-               
-            </div>
-           
-           
-          
-           <button id="link">Forgot Password? </button><br>
-
-              <button id="login">LOGIN</button>
-
-        </form>
+        </div>
     </div>
 </body>
 </html>
+
 <script>
-        document.querySelector("form").addEventListener("submit", login);
-  let arr2=[];
-function login() {
-    event.preventDefault();
-    //  console.log('in')
-    let email = document.querySelector("#email").value;
-    let pass = document.querySelector("#pass").value;
-
-    let user={
-        Email:email,
-        Pass:pass
-    }
-    arr2.push(user);
-
-    let arrFromLS = JSON.parse(localStorage.getItem("userData1"));
-    // console.log(arrFromLS)
-    let flag = false;
-    for (let i = 0; i < arrFromLS.length;i++) {
-        if (email == arrFromLS[i].Email && pass == arrFromLS[i].Pass) {
-            flag = true;
-            localStorage.setItem("logindata",JSON.stringify(arr2))
+    let userData1=JSON.parse(localStorage.getItem("userData1"))||[];
+    function myfunction(){
+        let data={
+        name:document.getElementById("name").value,
+        number:document.getElementById("num").value,
+        email:document.getElementById("email").value,
+        password:document.getElementById("pass").value
         }
-
-    }
-    if (flag == true) {
-        window.location.href="index.html";
-    }
-    else {
-        alert('Invalid Password or Email')
-    }
-
-}
-    
-    
-  function myFun(){
-        let x= document.getElementById("pass")
-        let y= document.getElementById("hide1")
-        let z= document.getElementById("hide2")
-
-        if(x.type==='password'){
-            x.type='text';
-            y.style.display='block';
-            z.style.display='none';
-        }else{
-            x.type='password';
-            y.style.display='none';
-            z.style.display='block';
+        if(checkemail(data.number)===true){
+            userData1.push(data)
+            localStorage.setItem("userData1",JSON.stringify(userData1))
+            alert("Account added successfully")
+            window.location.href="LastLogin.html"
         }
-  }
+        else{
+            alert("Account already exist")
+        }
+        
+    }
 
+    
+    function checkemail(number){
+            let filtered=userData1.filter(function(element){
+                return number===element.number;
+            })
+
+            if(filtered.length>0)
+            {
+                return false;
+            }
+            else{return true;}
+        }
 </script>
+
+
+
+
