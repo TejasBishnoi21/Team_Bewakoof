@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3126724da1.js"></script>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+/*---------------------------------------------------------------Top Bar Css Start------------------------------------------*/
+#top{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(218, 220, 225,0.9);
+    /* background-attachment: fixed; */
+}
+#top>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 70px;
+    
+}
+#top>div:first-child>ol{
+    display: flex;
+    list-style: none;
+   align-items: center;
+   justify-content: center;
+}
+#top>div:first-child>ol>li{
+    padding: 10px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+#top>div:last-child{
+    display: flex;
+    width: 20%;
+    align-items: flex-end;
+    margin-left: 240px;
+   
+}
+#top>div:last-child>ol{
+    display: flex;
+    list-style: none;
+ 
+}
+#top>div:last-child>ol>li{
+    padding: 10px;
+   margin-bottom: -3px;
+   font-family: monospace;
+   letter-spacing: 1px;
+}
+/*---------------------------------------------------------------Top Bar Css End------------------------------------------*/
+/*---------------------------------------------------------------Nav Bar Css Start------------------------------------------*/
+#nav{
+    width: 100%;
+    height: 53px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    background-attachment: fixed;
+}
+#nav>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 80px;
+}
+ #nav>div:first-child>a>img{
+    margin-top: 15px;
+    width: 60%;
+} 
+#nav>div:first-child>p{
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-top: 16px;
+    font-family: montserrat, sans-serif;
+}
+#nav>div:first-child>p:hover{
+    border-bottom: 5px solid gold;
+    margin-bottom: -1px;
+}
+#nav>div:last-child{
+    display: flex;
+    width: 50%;
+    align-items: flex-end;
+}
+#nav>div:last-child> .searcbar{
+    width: 60%;
+    height: 35px;
+    border: 1px solid red;
+    margin-right:  25px ;
+    margin-bottom:10px;
+    border-radius: 5px 5px 5px 5px;
+    
+    background: #eaeaea;
+    outline: none;
+    border: none;
+}
+#nav>div:last-child> .searcbar>span{
+   margin-left: 9px;
+}
+.searcbar>input{
+    width: 85%;
+    height: 90%;
+    outline: none;
+    border: none;
+    background: #eaeaea;
+    margin-top: 2px;
+   margin-left: 4px;
+}
+#nav>div:last-child>div:last-child{
+    display: flex;
+    /* margin-bottom: 18px; */
+    align-items: center;
+}
+#nav>div:last-child>div:last-child>p{
+    font-size: 20px;
+    /* margin-top: 7px; */
+}
+#vericleLine{
+   margin-right: 15px; 
+  margin-bottom: 9px;
+ 
+}
+#vericleLine+p{
+ color: rgb(51, 110, 110);
+ /* margin-left: -13px; */
+margin-bottom: 10px;
+}
+#vericleLine+p+img{
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+#vericleLine+p+img+img{
+padding: 5px;
+font-size: 20px;
+margin-bottom: 8px;
+}
+#left{
+    width: 50%;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#parent{
+    display: flex;
+}
+#right{
+    width: 50%;
+}
+
+p{
+    text-align: center;
+    font-size: large;
+    color: gray;
+}
+      #input1{
+            display:flex;
+            flex-direction: column;
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;    
+       }
+       #input1>input,#input1>button{
+           margin-top: 10px;
+           height: 60px;
+           border-radius: 10px;
+           text-align: center;
+           font-size: large;
+       }
+       #input1>button{
+           border: transparent;
+           background-color: #42a2a2;
+           color: white;
+           cursor: pointer;
+           border: 1px solid grey;
+
+       }
+       #middle{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 50%;
+           margin: auto;
+           margin-top: 20px;
+       }
+       #middle>button{
+           margin-top: 20px;
+           width: 100%;
+           height: 40px;
+           background-color: white;
+           border-radius: 12px;
+           font-weight: bold;
+           color:#707070;
+           cursor: pointer;
+           border: 1px solid grey;
+       }
+       #middle>button>a{
+           text-decoration:none;
+           color: gray;
+       }
+       #last{
+           display: flex;
+           gap: 5px;
+           width: 50%;
+           margin: auto;
+           margin-top: 15px;
+       }
+       #last>button{
+          width: 100%;
+          height: 35px;
+          background-color: white;
+          border-radius: 10px;
+          cursor: pointer;
+          border: 1px solid grey;
+          display: flex;
+          align-items: center;
+          padding-left:25px;
+
+       }
+      #last img{
+           width: 30px;
+           height: 25px;
+
+       }
+       #asd>h1{
+           margin-top: 20px;
+           text-align: center;
+       }
+       #asd>p{
+           margin-top: 20px;
+           font-size: 20px
+       }
+       #left>img{
+           margin-top: 50px;
+       }
+     
+    </style>
+</head>
+<body>
+     <!---------------------------------------------------------------Top Bar Start------------------------------------------>
+     <div id="top">
+        <div>
+            <ol>
+                <li>Offer</li>
+                <li>Fanbook</li>
+                <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+                <li>Download App</li>
+                <li>TriBe Membership</li>
+            </ol>
+        </div>
+        <div>
+            <ol>
+                <li>Contact Us</li>
+                <li>Track Order</li>
+            </ol>
+        </div>
+    </div>
+    <!---------------------------------------------------------------Top Bar End------------------------------------------>
+    <!--------------------------------------------------------------------Navbar Start------------------------------------>
+    <div id="nav">
+        <!------------------------------------------------------------------------Left Side ------------------------------->
+        <div>
+            <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                    alt="Bewakoof"></a>
+            <p><a href="#" style="text-decoration:none ; color: black;"> Men</a> </p>
+            <p><a href="#" style="text-decoration:none ;color: black;"> Women</a> </p>
+            <p><a href="#" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+        </div>
+        <!------------------------------------------------------------------------Right Side ------------------------------->
+        <div>
+            <div class="searcbar">
+                <span class="fa-solid fa-magnifying-glass"></span>
+                <input type="text" placeholder="Search by products, catergory or collection ">
+            </div>
+            <div>
+                <p id="vericleLine"> | </p>
+                <p> Login </p>
+                <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
+                <img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <div id="parent">
+
+        <div id="left">
+            <h1>Welcome to the world of Bewakoof!</h1>
+            <img src="https://images.bewakoof.com/web/group-19-1617704502.png" alt="">
+        </div>
+        <div id="right">
+            <div id="asd">
+                <h1>Login / Sign up</h1>
+                <p>For latest trends, excitings Offers and everything Bewakoof!</p>
+           </div>
+          <div id="input1">
+            <input type="number" id="num" placeholder="Enter Mobile Number">
+            <button onclick="myfunction()">CONTINUE</button>
+           </div>
+
+           <div id="middle">
+            <h3>OR</h3>
+            <button><a href="../Login&footer/finallogin.html"> CONTINUE WITH EMAIL</a></button>
+           </div>
+         <div id="last">
+             <button><a href="http://www.google.com"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png" alt="" ></a>GOOGLE</button>
+             <button><a href="http://facebook.com"><img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png" alt=""> </a>FACEBOOK</button>
+         </div>
+
+        </div>
+             
+    </div>
+
+</body>
+
+<script>
+
+
+function myfunction(){
+    let x=document.getElementById("num").value;
+    let datafromLs=JSON.parse(localStorage.getItem("userData1"))||[];
+    flag=false;
+    datafromLs.forEach(function(elem){
+        
+        if(elem.number===document.getElementById("num").value)
+        {   
+            alert("login successful")
+            flag=true;
+        }
+        
+    })
+    if(flag==true){
+        window.location.href="loginotp.html"
+
+    }
+    else{
+        alert("You seem to be a new user sign up")
+        window.location.href="signUp.html"
+    }
+}
+</script>
+</html>
