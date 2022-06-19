@@ -143,6 +143,11 @@
 </html>
 
 <script>
+
+    
+      let amount=JSON.parse(localStorage.getItem("total")) || []
+   
+
     let addcart=JSON.parse(localStorage.getItem("additem")) || []
 
 
@@ -412,6 +417,22 @@ function promofun(code,total){
     }
     
     else{ ppppp1.innerText=total}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -499,8 +520,19 @@ prch.innerText=total || 0
 
 prcdiv.append(prcp,prch)
 
+
+
+
+
 let adddiv=document.createElement("div")
 adddiv.innerText="ADDRESS"
+adddiv.addEventListener("click",function(){
+    address(total)
+})
+
+
+
+
 
 let adda=document.createElement("a")
 adda.setAttribute("href","data.html")
@@ -511,6 +543,21 @@ totaldiv.append(prcdiv,adddiv)
 
 
 document.querySelector("#right").append(p3,p4,p5,rdiv2,rdiv3,totaldiv)
+
+
+function address (total){
+    event.target 
+
+    amount.push(total)
+ 
+    localStorage.setItem("total",JSON.stringify(amount))
+
+    window.location.href="address.html"
+
+
+    
+}
+
 
 
     
