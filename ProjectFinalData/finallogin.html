@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Account Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,6 +15,29 @@
     margin: 0%;
     padding: 0%;
 }
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    }
+
+    a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+ 
+    a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+ }
 /*---------------------------------------------------------------Top Bar Css Start------------------------------------------*/
 #top{
     display: flex;
@@ -215,11 +239,11 @@ margin-bottom: 8px;
     <div id="top">
         <div>
             <ol>
-                <li>Offer</li>
-                <li>Fanbook</li>
+                <li><a href="offer.html"> Offer </a> </li>
+                <li><a href="fanbook.html"> Fanbook</a></li>
                 <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
-                <li>Download App</li>
-                <li>TriBe Membership</li>
+                <li><a href="index.html"> Download App</a> </li>
+                <li><a href="tribe.html"> TriBe Membership</a></li>
             </ol>
         </div>
         <div>
@@ -234,11 +258,11 @@ margin-bottom: 8px;
     <div id="nav">
         <!------------------------------------------------------------------------Left Side ------------------------------->
         <div>
-            <a href="index.js"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+            <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
                     alt="Bewakoof"></a>
-            <p><a href="#" style="text-decoration:none ; color: black;"> Men</a> </p>
-            <p><a href="#" style="text-decoration:none ;color: black;"> Women</a> </p>
-            <p><a href="#" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+            <p><a href="mensData.html" style="text-decoration:none ; color: black;"> Men</a> </p>
+            <p><a href="womenData.html" style="text-decoration:none ;color: black;"> Women</a> </p>
+            <p><a href="mobilebrands.html" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
         </div>
         <!------------------------------------------------------------------------Right Side ------------------------------->
         <div>
@@ -250,7 +274,7 @@ margin-bottom: 8px;
                 <p id="vericleLine"> | </p>
                 <p> Login </p>
                 <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
-                <img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset="">
+                <a href="cart.html" ><img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset=""></a>
             </div>
         </div>
     </div>
@@ -312,7 +336,10 @@ function login() {
 
     }
     if (flag == true) {
-        window.location.href="../Linking/index.html";
+
+        alert("Login Succesful");
+        window.location.href="index.html";
+        
     }
     else {
         alert('Invalid Password or Email')

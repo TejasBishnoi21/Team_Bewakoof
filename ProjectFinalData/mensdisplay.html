@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's Fashion - Shop Women Clothing Online in India | Bewakoof</title>
+    <title>Men's Fashion - Shop Men Clothing Online in India | Bewakoof</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../kapda/navbar.css">
     <script src="https://kit.fontawesome.com/3126724da1.js"></script>
     <style>
         
-
-
+        body{margin: 0px;}
 
         body>#container{
 
@@ -21,6 +20,7 @@
             margin: auto;
             justify-content: space-evenly;
             margin-top: 150px;
+            
 
 
         }
@@ -42,13 +42,13 @@
             font-size: 18px;
             font-family: montserrat-semibold,sans-serif;
             margin-bottom: 10px;
-            
         }
         #right>p{
             color:#737373;
             font-size: 18px;
             /* font-family: 'Courier New', Courier, monospace; */
             margin-bottom: 10px;
+            
         }
         #right>h1{
             color: #0f0f0f;
@@ -113,6 +113,7 @@
       #button{
         display: flex;
         justify-content: space-between;
+        margin-top: 15px;
         margin-bottom: 15px;
 
       }
@@ -143,17 +144,17 @@
 </head>
 <body>
 
+ 
 
+  <div id="top" style="position:fixed ;margin-top:-150px;" >
 
-  <div id="top"  style="position:fixed ;margin-top:-150px;">
-
-    <div>
+    <div >
         <ol>
-            <li> <a href="offer.html"> Offer</a></li>
-            <li><a href="fanbook.html"> fanbook</a></li>
-            <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
-            <li> <a href="">Download App</a> </li>
-            <li> <a href=""> TriBe Membership</a></li>
+          <li> <a href="offer.html"> Offer</a></li>
+          <li><a href="fanbook.html"> fanbook</a></li>
+          <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+          <li> <a href="">Download App</a> </li>
+          <li> <a href=""> TriBe Membership</a></li>
         </ol>
     </div>
 
@@ -169,15 +170,15 @@
 <!---------------------------------------------------------------Top Bar End------------------------------------------>
 
 <!--------------------------------------------------------------------Navbar Start------------------------------------>
-<div id="nav"  style="position:fixed ;margin-top:-130px;background-color: white;">
+<div id="nav" style="position:fixed ;margin-top:-130px;background-color: white;">
     <!------------------------------------------------------------------------Left Side ------------------------------->
 
     <div>
-        <a href="index.js"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+        <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
                 alt="Bewakoof"></a>
-        <p><a href="#" style="text-decoration:none ; color: black;"> Men</a> </p>
-        <p><a href="#" style="text-decoration:none ;color: black;"> Women</a> </p>
-        <p><a href="#" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+        <p><a href="mensData.html" style="text-decoration:none ; color: black;"> Men</a> </p>
+        <p><a href="womenData.html" style="text-decoration:none ;color: black;"> Women</a> </p>
+        <p><a href="mobilebrands.html" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
     </div>
 
     <!------------------------------------------------------------------------Right Side ------------------------------->
@@ -192,9 +193,9 @@
 
         <div>
             <p id="vericleLine"> | </p>
-            <p> Login </p>
+            <p> <a href="LastLogin.html">Login</a> </p>
             <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
-            <img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset="">
+            <a href="cart.html" ><img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset=""></a>
         </div>
 
     </div>
@@ -206,11 +207,13 @@
 
 
 
+ 
 
-  <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+  
 
-    <div id="container">
-        <div id="left">
+      <!-- ----------------------------------------------------------------- -->
+    <div id="container"   >
+        <div id="left"  >
              <img src="https://images.bewakoof.com/t540/love-for-all-oversized-fit-t-shirt-510692-1655308520-1.jpg">
         </div>
         <div id="right">
@@ -248,49 +251,43 @@
            <div id="extra">
              <div>  <h4>SAVE EXTRA WITH 3 OFFERS</h4> <h2>+</h2></div>
            <div> <h4>PRODUCT DESCRIPTION </h4> <h2>+</h2></div>
-           <div>  <h4>15 DAY PETURNS & EXCHANGE </h4> <h2>+</h2></div>
+           <div>  <h4>15 DAY RETURNS & EXCHANGE </h4> <h2>+</h2></div>
            <div> <h4>DELIVERY DETAILS </h4> <h2>+</h2></div>
          
 
 
          </div>
-          
-        
+         
         </div>
     </div>
-
-    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
-
-
     
 </body>
 </html>
 
 <script>
 
-let displaydatawomen=JSON.parse(localStorage.getItem("displayitemwomen")) || []
-
+let displaydatamen=JSON.parse(localStorage.getItem("displayitemmen")) || []
 
 let  addcart=JSON.parse(localStorage.getItem("additem")) || []
 
 
 
 
-displaytable(displaydatawomen)
+displaytable(displaydatamen)
 
-function displaytable(displaydatawomen){
-  for(let i=displaydatawomen.length-1;i>=0;i-- ){
+function displaytable(displaydatamen){
+  for(let i=displaydatamen.length-1;i>=0;i-- ){
 
      let image= document.querySelector("#left>img")
-     image.setAttribute("src",displaydatawomen[i].img)
+     image.setAttribute("src",displaydatamen[i].img)
 
-     let name= document.querySelector("#right>h2+p").innerText=displaydatawomen[i].name
+     let name= document.querySelector("#right>h2+p").innerText=displaydatamen[i].name
 
-     let price=document.querySelector("#right>h1").innerText="₹"+displaydatawomen[i].price
+     let price=document.querySelector("#right>h1").innerText="₹"+displaydatamen[i].price
 
     let addtocart=document.querySelector("#button>button")
     addtocart.addEventListener("click",function(){
-      addfun(displaydatawomen[i])
+      addfun(displaydatamen[i])
     })
      
    break
@@ -298,26 +295,34 @@ function displaytable(displaydatawomen){
 }
 
 
-function addfun(displaydatawomen){
+function addfun(displaydatamen){
     event.target
 
 
 
     let flag=false
   for(let i=0;i<addcart.length;i++){
-    if(addcart[i]["productID"]==displaydatawomen["productID"]){
+    if(addcart[i]["productID"]==displaydatamen["productID"]){
        flag=true
     }
   }
   if(flag==true){
     alert("already exists in cart")
   }else{
-    addcart.push(displaydatawomen)
+    addcart.push(displaydatamen)
     localStorage.setItem("additem",JSON.stringify(addcart))
     alert("added to cart successfully")
   }
 }
   
+      let blackbox=document.querySelector("#size>div>div+div")
+      blackbox.addEventListener("click",changecol)
+      function changecol(){
+        event.target
+        blackbox.style.backgroundColor="black"
+        blackbox.style.color="white"
+      }
 
 
 </script>
+

@@ -4,10 +4,179 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment Gateway</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
 </head>
 
 <style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/*---------------------------------------------------------------Top Bar Css Start------------------------------------------*/
+#top{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(218, 220, 225,0.9);
+    /* background-attachment: fixed; */
+}
+#top>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 70px;
+
+}
+#top>div:first-child>ol{
+    display: flex;
+    list-style: none;
+   align-items: center;
+   justify-content: center;
+}
+#top>div:first-child>ol>li{
+    padding: 10px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+#top>div:last-child{
+    display: flex;
+    width: 20%;
+    align-items: flex-end;
+    margin-left: 240px;
+
+}
+#top>div:last-child>ol{
+    display: flex;
+    list-style: none;
+
+}
+#top>div:last-child>ol>li{
+    padding: 10px;
+   margin-bottom: -3px;
+   font-family: monospace;
+   letter-spacing: 1px;
+}
+/*---------------------------------------------------------------Top Bar Css End------------------------------------------*/
+/*---------------------------------------------------------------Nav Bar Css Start------------------------------------------*/
+#nav{
+    width: 100%;
+    height: 53px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    background-attachment: fixed;
+    background-color: white;
+}
+#nav>div:first-child{
+    display: flex;
+    width: 60%;
+    margin-left: 80px;
+}
+ #nav>div:first-child>a>img{
+    margin-top: 15px;
+    width: 60%;
+} 
+#nav>div:first-child>p{
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-top: 16px;
+    font-family: montserrat, sans-serif;
+}
+#nav>div:first-child>p:hover{
+    border-bottom: 5px solid gold;
+    margin-bottom: -1px;
+}
+#nav>div:last-child{
+    display: flex;
+    width: 50%;
+    align-items: flex-end;
+}
+#nav>div:last-child> .searcbar{
+    width: 60%;
+    height: 35px;
+    border: 1px solid red;
+    margin-right:  25px ;
+    margin-bottom:10px;
+    border-radius: 5px 5px 5px 5px;
+
+    background: #eaeaea;
+    outline: none;
+    border: none;
+}
+#nav>div:last-child> .searcbar>span{
+   margin-left: 9px;
+}
+.searcbar>input{
+    width: 85%;
+    height: 90%;
+    outline: none;
+    border: none;
+    background: #eaeaea;
+    margin-top: 2px;
+   margin-left: 4px;
+}
+#nav>div:last-child>div:last-child{
+    display: flex;
+    /* margin-bottom: 18px; */
+    align-items: center;
+}
+#nav>div:last-child>div:last-child>p{
+    font-size: 20px;
+    /* margin-top: 7px; */
+}
+#vericleLine{
+   margin-right: 15px; 
+  margin-bottom: 9px;
+
+}
+#vericleLine+p{
+ color: rgb(51, 110, 110);
+ /* margin-left: -13px; */
+margin-bottom: 10px;
+}
+#vericleLine+p+img{
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+#vericleLine+p+img+img{
+padding: 5px;
+font-size: 20px;
+
+margin-bottom: 8px;
+}
+a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+    
+        a:active {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+
+
+
+   /* =======================payment-part-start */
     h1{
         margin-top:100px;
         margin-left:180px;
@@ -15,20 +184,21 @@
     }
     #main{
         /* border:1px solid red; */
-        width:42%;
+        width:80%;
         height:500px;
-        margin-left:180px;
+        margin-left:100px;
         display:flex;
+        justify-content:space-between;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
     #main>div{
         /* border:1px solid red; */
         width:65%;
-        height:400px;
+        height:500px;
     }
     #main>div:first-child{
         width:30%;
-        height:300px;
+        height:500px;
         /* padding-left: 40px;; */
     }
     #left,button{
@@ -42,7 +212,7 @@
     }
     button{
         border:1px solid grey;
-        border-bottom: lightgrey;
+        border-bottom: lightgray;
         border:none
     }
     #left>button:first-child{
@@ -67,7 +237,8 @@
         width:400px;
         border:none;
         outline:none;
-        margin-top: 60px;;
+        margin-top: 60px;
+        /* border-bottom:1px solid grey; */
 
     }
     #right> .common:nth-child(6){
@@ -109,9 +280,64 @@
         height:20px;
         margin-top:40px;
     }
+    #third{
+    
+        margin-left: 20px;
+
+    }
+    #btn{
+        background-color: rgb(6, 169, 169);
+        color: white;
+    }
 
 </style>
 <body>
+      <div id="top"> 
+        <div>
+            <ol>
+                <li>Offer</li>
+                <li>Fanbook</li>
+                <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+                <li>Download App</li>
+                <li>TriBe Membership</li>
+            </ol>
+        </div>
+        <div>
+            <ol>
+                <li>Contact Us</li>
+                <li>Track Order</li>
+            </ol>
+        </div>
+    </div>
+    <!---------------------------------------------------------------Top Bar End------------------------------------------>
+    <!--------------------------------------------------------------------Navbar Start------------------------------------>
+     <div id="nav">
+        <!------------------------------------------------------------------------Left Side ------------------------------->
+        <div>
+            <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                    alt="Bewakoof"></a>
+            <p><a href="mensData.html" style="text-decoration:none ; color: black;"> Men</a> </p>
+            <p><a href="womenData.html" style="text-decoration:none ;color: black;"> Women</a> </p>
+            <p><a href="mobilebrands.html" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+        </div>
+        <!------------------------------------------------------------------------Right Side ------------------------------->
+        <div>
+            <div class="searcbar">
+                <span class="fa-solid fa-magnifying-glass"></span>
+                <input type="text" placeholder="Search by products, catergory or collection ">
+            </div>
+            <div>
+                <p id="vericleLine"> | </p>
+                <p> <a href="LastLogin.html">Login</a> </p>
+                <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
+                <a href="cart.html" ><img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset=""></a>
+            </div>
+        </div>
+    </div>
+         
+
+
+    <!-- ===================payment-html-start============= -->
  
         <h1> Choose your Payment Method</h1>
         
@@ -138,13 +364,13 @@
                
                 <img src="data:image/png;base64,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
                 " alt="">
-                <img src="" alt="">
+               
                 <div class="common">
                     <input type="number" id="number" placeholder="Card Number">
                 </div>
                 <div class="common">
                     
-                     <input type="text" id="validity" placeholder="Valid through (MM/YY)                            CVV">
+                     <input   style="border-bottom: 1px solid grey;"     id="validity" placeholder="Valid through (MM/YY) ">
                     <input type="text" id="cvv" placeholder="CVV">
           
                     
@@ -163,10 +389,105 @@
                   
                     <p>This transaction you make is totally secure. We don't save your CVV number</p>
 
-                    <button>Pay ₹1545</button>
+                    <button id="btn"> <h2></h2> </button>
             </div>
+                 <div id="third">
+
+                 </div>
+            
 
        
     </div>
 </body>
 </html>
+<script>
+//    let dataarr=[
+//     {
+//        FlatNo:234,
+//         Adress:'K.B.road,Ambernath',
+//         State:"maharashtra",
+//         City:"Kalyan",
+//         Pin:123,
+//         Name:"Rahul"
+//     }
+
+//    ];
+
+         let ArrayOfObj = JSON.parse(localStorage.getItem("address")) || [];
+        
+         
+       
+     displayTable (ArrayOfObj);
+
+     function    displayTable (ArrayOfObj){
+        console.log(ArrayOfObj)
+        for(let i=ArrayOfObj.length-1;i>=0;i--){
+            let div=document.createElement("div")
+            div.style.marginLeft="30px"
+
+            let h2=document.createElement("h2")
+            h2.innerText="ADDRESS"
+            h2.style.color="teal"
+            h2.style.marginLeft=" 150px"
+            h2.style.marginBottom="40px"
+            
+            let p=document.createElement("p");
+            p.innerText="Delivering order to";
+
+            let h4=document.createElement("h4");
+            h4.innerText=ArrayOfObj[i].name
+
+            let div1=document.createElement("div");
+            div1.style.display="flex"
+            div1.style.marginRight="3px"
+            div1.style.marginLeft="30px"
+
+            let flat=document.createElement("p");
+            flat.innerText=ArrayOfObj[i].flat;
+            flat.style.color="black"
+
+            let city=document.createElement("p");
+            city.innerText=ArrayOfObj[i].city;
+            city.style.color="black"
+
+            let state=document.createElement("p");
+            state.innerText=ArrayOfObj[i].state;
+            state.style.color="black"
+
+            let PIN=document.createElement("p");
+            PIN.innerText=ArrayOfObj[i].pincode;
+            PIN.style.color="black"
+
+
+            div.append(h2,p,h4);
+            div1.append(flat,city,state,PIN)
+
+            document.querySelector("#third").append(div,div1);
+            break;
+        }
+              }
+
+              let amount=JSON.parse(localStorage.getItem("total")) || []
+            
+
+          displayAmount(amount);
+
+          function  displayAmount(amount){
+            for(let i=amount.length-1;i>=0;i--){
+              document.querySelector('#btn').innerHTML= "₹"+amount[i] || 0;
+              
+              break;
+            }
+          }
+              let btn= document.querySelector('#btn');
+              btn.addEventListener('click',last)
+
+
+              function last(){
+                event.target
+                alert('order Placed Successfully')
+
+                window.location.href="index.html";
+              }
+
+ </script>

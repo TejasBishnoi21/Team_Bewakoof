@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's Fashion - Shop Men Clothing Online in India | Bewakoof</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/3126724da1.js"></script>
 
     <style>
         *{
@@ -13,6 +15,29 @@
             padding:0px;
             box-sizing: border-box;
         }
+        a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+    
+        a:active {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
+    }
 
         #navbar{
             width:100%;
@@ -150,17 +175,70 @@
     </style>
 </head>
 <body>
-  <div id="navbar">
-    <div>This is Temporary Navbar</div>
-    <div>
-        <button><a href="signIn.html">Login</a></button>
-        <button><a href="signUp.html">Sign Up</a></button>
-        <button><a href="products.html">Products</a></button>
-        <button><a href="cart.html">Cart</a></button>
+    <div id="NavUddin">
+
+        <div id="top">
+
+            <div>
+                <ol>
+                    <li><a href="offer.html"> Offer </a> </li>
+                    <li><a href="fanbook.html"> Fanbook</a></li>
+                    <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+                    <li><a href="index.html"> Download App</a> </li>
+                    <li><a href="tribe.html"> TriBe Membership</a></li>
+                </ol>
+            </div>
+    
+            <div>
+                <ol>
+                    <li>Contact Us</li>
+                    <li>Track Order</li>
+                </ol>
+            </div>
+    
+        </div>
+    
+        <!---------------------------------------------------------------Top Bar End------------------------------------------>
+    
+        <!--------------------------------------------------------------------Navbar Start------------------------------------>
+        <div id="nav">
+            <!------------------------------------------------------------------------Left Side ------------------------------->
+    
+            <div>
+                <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                        alt="Bewakoof"></a>
+                <p><a href="mensData.html" style="text-decoration:none ; color: black;"> Men</a> </p>
+                <p><a href="womenData.html" style="text-decoration:none ;color: black;"> Women</a> </p>
+                <p><a href="mobilebrands.html" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+            </div>
+    
+            <!------------------------------------------------------------------------Right Side ------------------------------->
+    
+            <div>
+    
+                <div class="searcbar">
+                    <span class="fa-solid fa-magnifying-glass"></span>
+    
+                    <input type="text" placeholder="Search by products, catergory or collection ">
+                </div>
+    
+                <div>
+                    <p id="vericleLine"> | </p>
+                    <p> <a href="LastLogin.html">Login</a> </p>
+                    <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
+                    <a href="cart.html" ><img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset=""></a>
+                </div>
+    
+            </div>
+    
+        </div>
+
     </div>
-</div>
+
+    <!-- [Main Page Below] -->
+  
 <br>
-<hr><br>
+<br>
 
 <div class="container">
     <div class="mainHeading">
@@ -190,8 +268,8 @@
             
                 <select id="priceFilter">
                     <option value="">Price</option>
-                    <option value="low-high">Low to High</option>
-                    <option value="high-low">High to Low</option>
+                    <option value="Lower To High">Low to High</option>
+                    <option value="Higher To Lower">High to Low</option>
                 </select>
             
                 <select id="sizeFilter">
@@ -225,7 +303,7 @@
       {
         brand: "Bewakoof",
         name: "Men's Black Killmonger Graphic Printed T-shirt",
-        price: "999",
+        price: 999,
         size: "S",
         productID: "men1",
         category: "T-Shirt",
@@ -234,7 +312,7 @@
         {
         brand: "Bewakoof",
         name: "Men's Olive Killmonger Graphic Printed Oversized T-shirt ",
-        price: "1299 ",
+        price: 1299,
         size: "S",
         productID: "men2",
         category: "T-Shirt",
@@ -243,7 +321,7 @@
      {
         brand: "Bewakoof ",
         name: "Men's Purple Love For All Graphic Printed Oversized T-shirt",
-        price: "1299 ",
+        price: 1299,
         size: "S",
         productID: "men3",
         category: "T-Shirt",
@@ -252,7 +330,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Black Kalyug Age of Machines Graphic Printed T-shirt ",
-        price: "999 ",
+        price: 999,
         size: "S",
         productID: "men4",
         category: "T-Shirt",
@@ -261,7 +339,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Black Placket Print Shirt ",
-        price: "S",
+        price: 1200,
         size: "X,XX,XXL",
         productID: "men5",
         category: "Shirt",
@@ -270,7 +348,7 @@
  {
         brand: "Bewakoof",
         name: "Winter Moss Full Sleeve Shirt ",
-        price: "1399",
+        price: 1399,
         size: "XS",
         productID: "men6",
         category: "Shirt",
@@ -279,7 +357,7 @@
  {
         brand: "Bewakoof",
         name: " Men's Relaxed Fit Grey Solid Short Kurta",
-        price: "999 ",
+        price: 999,
         size: "XS",
         productID: "men7",
         category: "Shirt",
@@ -288,7 +366,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Relaxed Fit White Solid Short Kurta ",
-        price: "999",
+        price: 999,
         size: "XS",
         productID: "men8",
         category: "Shirt",
@@ -297,7 +375,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Pink All Over Printed Boxers ",
-        price: "599 ",
+        price: 599,
         size: "XS",
         productID: "men9",
         category: "Boxer",
@@ -306,7 +384,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Black All Over Flower Printed Boxers ",
-        price: "599",
+        price: 599,
         size: "XS",
         productID: "men10",
         category: "Boxer",
@@ -315,7 +393,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Blue All Over Printed Boxers",
-        price: "599",
+        price: 599,
         size: "M",
         productID: "men11",
         category: "Boxer",
@@ -324,7 +402,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Black Self Design Boxers ",
-        price: "599",
+        price: 599,
         size: "M",
         productID: "men12",
         category: "Boxer",
@@ -333,7 +411,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Plain Color Block Cargo Joggers ",
-        price: "1899 ",
+        price: 1899,
         size: "M",
         productID: "men13",
         category: "Joggers",
@@ -342,7 +420,7 @@
  {
         brand: "PLAY by BEWAKOOF",
         name: "Men's Black Training Vest ",
-        price: "849",
+        price: 849,
         size: "M",
         productID: "men14",
         category: "Vest",
@@ -351,7 +429,7 @@
  {
         brand: "PLAY by BEWAKOOF",
         name: "Men's White Training Vest ",
-        price: "849",
+        price: 849,
         size: "M",
         productID: "men15",
         category: "Vest",
@@ -360,7 +438,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Blue Marvel Moon Knight Graphic Printed T-shirt ",
-        price: "999 ",
+        price: 999,
         size: "L",
         productID: "men16",
         category: "T-shirt",
@@ -369,7 +447,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Blue Busy Doing Nothing T-shirt",
-        price: "1099",
+        price: 1099,
         size: "L",
         productID: "men17",
         category: "T-shirt",
@@ -378,7 +456,7 @@
  {
         brand: "Bewakoof",
         name: "Men's Black Witcher Ability T-shirt ",
-        price: "799 ",
+        price: 799,
         size: "L",
         productID: "men18",
         category: "T-shirt",
@@ -387,7 +465,7 @@
  {
         brand: "Bewakoof ",
         name: "Elite Ninja Round Neck Vest For Men's ",
-        price: "750",
+        price: 750,
         size: "L",
         productID: "men19",
         category: "Vest",
@@ -396,7 +474,7 @@
  {
         brand: "OFFICIAL MARVEL MERCHANDISE",
         name: "Men's White Mech Strike Chest Printed Oversized Fit T-shirt ",
-        price: "999 ",
+        price: 999,
         size: "L",
         productID: "men20",
         category: "T-shirt",
@@ -405,7 +483,7 @@
 {
         brand: "OFFICIAL DC COMICS MERCHANDISE",
         name: "Men's Grey Batman Logo Blueprint Hoodie T-shirt ",
-        price: "1199",
+        price: 1199,
         size: "XL",
         productID: "men22",
         category: "Hoodie",
@@ -414,7 +492,7 @@
 {
         brand: "Bewakoof ",
         name: "Men's Blue Busy Doing Nothing T-shirt",
-        price: "1099",
+        price: 1099,
         size: "XL",
         productID: "men23",
         category: "T-shirt",
@@ -423,7 +501,7 @@
 {
         brand: "Bewakoof ",
         name: "Men's White T-shirt",
-        price: "1199",
+        price: 1199,
         size: "XL",
         productID: "men24",
         category: "T-shirt",
@@ -432,7 +510,7 @@
 {
         brand: "Bewakoof ",
         name: " Men's Blue T-shirt",
-        price: "999",
+        price: 999,
         size: "XL",
         productID: "men25",
         category: "T-shirt",
@@ -441,7 +519,7 @@
 {
         brand: " Bewakoof",
         name: "The Traveller Full Sleeve T-Shirt ",
-        price: "1299",
+        price: 1299,
         size: "XL",
         productID: "men26",
         category: "T-shirt",
@@ -450,7 +528,7 @@
 {
         brand: "Bewakoof",
         name: "Men's Birthday Yellow T-shirt",
-        price: "699",
+        price: 699,
         size: "XXL",
         productID: "men27",
         category: "T-shirt",
@@ -459,7 +537,7 @@
 {
         brand: "Bewakoof",
         name: "Sunset Block Half Sleeve T-Shirt",
-        price: "1099",
+        price: 1099,
         size: "XXL",
         productID: "men28",
         category: "T-shirt",
@@ -468,7 +546,7 @@
 {
         brand: "Bewakoof",
         name: " Men's Blue T-shirt",
-        price: "1199",
+        price: 1199,
         size: "XXL",
         productID: "men29",
         category: "T-shirt",
@@ -477,7 +555,7 @@
 {
         brand: "Bewakoof",
         name: "Men's Pink Kalyug Age of Machines Graphic Printed Hoodie T-shirt",
-        price: "1299",
+        price: 1299,
         size: "XXL",
         productID: "men30",
         category: "Hoodie",
@@ -513,11 +591,11 @@
             let category=document.createElement("p");
             category.innerText=element.name;
             let price=document.createElement("h4");
-            price.innerText=element.price;
+            price.innerText="₹"+element.price;
 
-            img.addEventListener("click",function(){
-                window.location.href="https://www.google.com/"  //[Vinayak, Add your link here]
-            })
+            // img.addEventListener("click",function(){
+            //     window.location.href="https://www.google.com/"  //[Vinayak, Add your link here]
+            // })
             product.append(img,name,category,price);
             productsCont.append(product);
         })
@@ -572,5 +650,35 @@
             displayProducts(filteredSz);
         }
     })
-    
+
+
+    // Filter by price
+
+        document.getElementById("priceFilter").addEventListener("change", priceFilter);
+
+        function priceFilter(){
+            let selected=document.querySelector("#priceFilter").value;
+
+            // console.log(selected)
+
+            if(selected=="Lower To High"){
+                let x=mensData.sort(function(a,b){
+                    if(a.price>b.price) return 1;
+                    if(a.price<b.price) return -1;
+
+                    return 0;
+                })
+                displayProducts(x);
+            }
+            else if(selected=="Higher To Lower"){
+                let x=mensData.sort(function(a,b){
+                    if(a.price>b.price) return -1;
+                    if(a.price<b.price) return 1;
+
+                    return 0;
+                })
+                displayProducts(x);
+            }
+        }
+
 </script>

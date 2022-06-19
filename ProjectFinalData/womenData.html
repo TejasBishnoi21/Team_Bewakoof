@@ -188,7 +188,7 @@
             <!------------------------------------------------------------------------Left Side ------------------------------->
     
             <div>
-                <a href="../Linking/index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                <a href="index.html"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
                         alt="Bewakoof"></a>
                 <p><a href="mensData.html" style="text-decoration:none ; color: black;"> Men</a> </p>
                 <p><a href="womenData.html" style="text-decoration:none ;color: black;"> Women</a> </p>
@@ -246,9 +246,9 @@
         <div id="filters">
             
                 <select id="priceFilter">
-                    <option value="">Price</option>
-                    <option value="low-high">Low to High</option>
-                    <option value="high-low">High to Low</option>
+                    <option value="price">Price</option>
+                    <option value="Lower To High">Low to High</option>
+                    <option value="Higher To Lower">High to Low</option>
                 </select>
             
                 <select id="sizeFilter">
@@ -581,5 +581,38 @@
             displayProducts(filteredSz);
         }
     })
+
+    //[ Price Filter]
+
+    document.getElementById("priceFilter").addEventListener("change", priceFilter);
+
+function priceFilter(){
+    let selected=document.querySelector("#priceFilter").value;
+
+    // console.log(selected)
+
+    if(selected=="Lower To High"){
+        let x=womensData.sort(function(a,b){
+            if(a.price>b.price) return 1;
+            if(a.price<b.price) return -1;
+
+            return 0;
+        })
+        displayProducts(x);
+    }
+    else if(selected=="Higher To Lower"){
+        let x=womensData.sort(function(a,b){
+            if(a.price>b.price) return -1;
+            if(a.price<b.price) return 1;
+
+            return 0;
+        })
+        displayProducts(x);
+    }
+    else if(selected==="price"){
+        return 0;
+    } 
+    displayProducts(x);
+}
     
 </script>
