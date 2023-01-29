@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Fashion - Shop Women Clothing Online in India | Bewakoof</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png" hreflang="en-in">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/3126724da1.js"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        #navbar{
+            width:100%;
+            height:100px;
+            margin:auto;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            background-color: aliceblue;
+        }
+
+        #navbar>:nth-child(1){
+            font-size: 40px;
+        }
+
+        #navbar>:nth-child(2)>button{
+            font-size: larger;
+            width:100px;
+            margin-right: 20px;
+            border-radius: 20px;
+        }
+
+        #navbar>:nth-child(2)>button:hover{
+            background-color: aqua;
+        }
+
+        #products{
+            display:grid;
+            /* height: 200px; */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            /* gap:10px 10px; */
+            /* border:1px solid green; */
+        }
+        #products>div{
+            /* border:1px solid red; */
+            width:70%;
+        }
+
+        #products>div>img{
+            width:250px;
+            height:300px;
+            /* border:1px solid blue; */
+        }
+        #products>div>h2{
+            color: #4f5362;
+            font-family: montserrat-semibold,sans-serif!important;
+            font-size: 13px!important;
+            line-height: 15px!important;
+        }
+        #products>div>p{
+            margin-top: 4px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-family: montserrat-regular,sans-serif!important;
+            font-size: 11px!important;
+            line-height: 12px!important;
+        }
+        #products>div>button{
+            border:1px solid #ffff00;
+            background-color: white;
+            height:30px;
+            width:100px;
+            border-radius: 5px;
+        }
+        #products>div>button:hover{
+            /* box-shadow: 5px 10px #888888; */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        #sort{
+            display:flex;
+            justify-content: flex-end;
+            width:80%;
+            margin:auto;
+            /* border:1px solid; */
+            /* margin-right: 30px; */
+            gap:10px;
+        }
+        .fil{
+            display:flex;
+            justify-content: flex-start;
+            width:80%;
+            margin:auto;
+            /* border: 1px solid; */
+
+        }
+        .fil>p{
+                line-height: normal;
+                float: left;
+                color: rgba(45,45,45,.5);
+                font-family: montserrat-bold,sans-serif;
+                font-size: 13px;
+                text-transform: uppercase;
+                margin: 0 8px 0 0;
+        }
+        .headingInner{
+            display: flex;
+            width:80%;
+            gap: 10px;
+            /* border: 1px solid; */
+            align-items: center;
+            margin:auto;
+            /* margin-bottom: 20px; */
+        }
+        .headingInner>h1{
+            font: 700 24px montserrat-bold,sans-serif;
+            text-align: center;
+            display: inline-block;
+            float: none;
+            color: #2d2d2d;
+        }
+        .headingInner>span{
+            font-size: 20px;
+            font-family: montserrat-regular, sans-serif;
+            color:#949494
+        }
+        #contentWrap{
+            display:flex;
+            /* border:1px solid red; */
+            width:80%;
+            margin:auto;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        #filters{
+            width:25%;
+            /* border:1px solid; */
+            display:block;
+        }
+        #filters>select{
+            width:100%;
+            border:transparent;
+            margin-bottom: 20px;
+            /* How to underline these filters ? */
+        }
+        #products{
+            width:74%;
+        }
+    </style>
+</head>
+<body>
+  <div id="NavUddin">
+
+        <div id="top">
+
+            <div>
+                <ol>
+                    <li>Offer</li>
+                    <li>Fanbook</li>
+                    <span class="fa-solid fa-mobile-screen-button" style="font-size:15px ; color:rgb(65, 74, 82);"> </span>
+                    <li>Download App</li>
+                    <li>TriBe Membership</li>
+                </ol>
+            </div>
+    
+            <div>
+                <ol>
+                    <li>Contact Us</li>
+                    <li>Track Order</li>
+                </ol>
+            </div>
+    
+        </div>
+    
+        <!---------------------------------------------------------------Top Bar End------------------------------------------>
+    
+        <!--------------------------------------------------------------------Navbar Start------------------------------------>
+        <div id="nav">
+            <!------------------------------------------------------------------------Left Side ------------------------------->
+    
+            <div>
+                <a href="index.js"> <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                        alt="Bewakoof"></a>
+                <p><a href="#" style="text-decoration:none ; color: black;"> Men</a> </p>
+                <p><a href="#" style="text-decoration:none ;color: black;"> Women</a> </p>
+                <p><a href="#" style="text-decoration:none ; color: black;"> Mobile Covers</a> </p>
+            </div>
+    
+            <!------------------------------------------------------------------------Right Side ------------------------------->
+    
+            <div>
+    
+                <div class="searcbar">
+                    <span class="fa-solid fa-magnifying-glass"></span>
+    
+                    <input type="text" placeholder="Search by products, catergory or collection ">
+                </div>
+    
+                <div>
+                    <p id="vericleLine"> | </p>
+                    <p> Login </p>
+                    <img src="https://images.bewakoof.com/web/ic-web-head-wishlist.svg" alt="" srcset="">
+                    <img src=" https://images.bewakoof.com/web/ic-web-head-cart.svg" alt="" srcset="">
+                </div>
+    
+            </div>
+    
+        </div>
+
+    </div>
+<br>
+<br>
+
+<div class="container">
+    <div class="mainHeading">
+        <div class="headingInner">
+            <h1>Women Clothing</h1>
+            <span>(7303)</span>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+<div id="sort">
+    <p>Sort by category:</p>
+    <select id="filter">
+        <option value="All">All</option>
+        <option value="T-shirt">T-Shirts</option>
+        <option value="Dress">Dress</option>
+        <option value="Jeans">Jeans</option>
+        <option value="Casual Pants">Casual Pants</option>
+        
+    </select>
+</div>
+<div class="fil"><p>Filters</p></div>
+    <div id="contentWrap">
+        <div id="filters">
+            
+                <select id="priceFilter">
+                    <option value="">Price</option>
+                    <option value="low-high">Low to High</option>
+                    <option value="high-low">High to Low</option>
+                </select>
+            
+                <select id="sizeFilter">
+                    <option value="Size">Size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+            
+                <select id="brandFilter">
+                    <option value="Brand">Brand</option>
+                    <option value="Bewakoof">Bewakoof</option>
+                    <option value="Harpa">Harpa</option>
+                    <option value="High Star">High Star</option>
+                    <option value="Kotty">Kotty</option>
+                </select>
+            
+        </div>
+        <div id="products">
+            <!-- Products will be appended here -->
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let womensData= [
+
+        {
+            img:"https://images.bewakoof.com/t540/everyday-mood-boyfriend-t-shirt-509637-1655131674-1.jpg" ,
+            name:"Women's Pink Everyday Mood Graphic Printed Oversized T-shirt",
+            brand:"Harpa",
+            price:499,
+            size:"S",
+            category:"T-shirt",
+            productID:"wom1"
+        },
+
+        {img:"https://images.bewakoof.com/t320/avoiding-resposibilities-boyfriend-t-shirt-509137-1654873589-1.jpg",
+            name:"Women's Purple Avoiding Responsibilities Graphic Printed Boyfriend T-shirt",
+            brand:"Harpa",
+            price:299,
+            size:"S",
+            category:"T-shirt",
+            productID:"wom2"},
+
+            {img:"https://images.bewakoof.com/original/women-s-black-friends-typography-boyfriend-t-shirt-234669-1651240018-1.jpg?tr=q-100",
+            name:"Women's Black Friends Typography Boyfriend T-shirt",
+            brand:"Harpa",
+            price:275,
+            size:"S",
+            category:"T-shirt",
+            productID:"wom3"},
+
+            {img:"https://images.bewakoof.com/t540/cup-of-care-boyfriend-t-shirt-bold-red-312140-1638021138-1.jpg",
+            name:"Cup Of Care Boyfriend T-Shirt Bold Red",
+            brand:"Harpa",
+            price:275,
+            size:"S",
+            category:"T-Shirt",
+            productID:"wom4"},
+
+            {img:"https://images.bewakoof.com/t540/bewakoof-women-white-minimal-believe-boyfriend-t-shirts-502411-1653553114-1.jpg",
+            name:"Women's White Believe Typography Boyfriend T-shirt",
+            brand:"Harpa",
+            price:499,
+            size:"S",
+            category:"T-Shirt",
+            productID:"wom5"},
+
+            {img:"https://images.bewakoof.com/t540/peageant-blue-v-neck-striped-sleeves-t-shirt-330298-1635869736-1.jpg",
+            name:"Peageant Blue V Neck Striped Sleeves T-Shirt",
+            brand:"Bewakoof",
+            price:499,
+            size:"S",
+            category:"T-Shirt",
+            productID:"wom6"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-black-t-shirt-232388-1651248108-1.jpg",
+            name:"Women's Black T-shirt",
+            brand:"Bewakoof",
+            price:349,
+            size:"XS",
+            category:"T-Shirt",
+            productID:"wom7"},
+
+            {img:"https://images.bewakoof.com/t540/black-camo-t-shirt-dress-419288-1643282671-1.jpg",
+            name:"Women's Black Camo Dress",
+            brand:"Bewakoof",
+            price:299,
+            size:"XS",
+            category:"Dress",
+            productID:"wom8"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-plain-high-neck-pocket-dress-navy-blue-321810-1638214347-1.jpg",
+            name:"Women's Plain High Neck Pocket Dress Navy Blue",
+            brand:"Bewakoof",
+            price:499,
+            size:"XS",
+            category:"Dress",
+            productID:"wom9"},
+
+            {img:"https://images.bewakoof.com/t540/tie-n-dye-boyfriend-dress-421618-1647430062-1.jpg",
+            name:"Women's White & Purple Tie N Dye Boyfriend Dress",
+            brand:"Bewakoof",
+            price:649,
+            size:"XS",
+            category:"Dress",
+            productID:"wom10"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-checks-shirt-tunic-300442-1638212790-1.jpg",
+            name:"Women's Checks Shirt Tunic",
+            brand:"High Star",
+            price:688,
+            size:"XS",
+            category:"Dress",
+            productID:"wom11"},
+
+            {img:"https://images.bewakoof.com/t540/black-half-sleeve-round-neck-t-shirt-dress-393264-1634714340-1.jpg",
+            name:"Black Half Sleeve Round Neck Loungewear T-shirt Dress",
+            brand:"High Star",
+            price:375,
+            size:"XS",
+            category:"Dress",
+            productID:"wom12"},
+
+            {img:"https://images.bewakoof.com/t540/black-printed-3-4th-sleeve-v-neck-ethnic-flared-dress-403809-1634031784-1.jpg",
+            name:"Women's Printed Kurti Dress",
+            brand:"High Star",
+            price:599,
+            size:"M",
+            category:"Dress",
+            productID:"wom13"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-sleeveless-ethnic-dress-413676-re-shoot-1639384220-1.jpg",
+            name:"Women's Sleeveless Ethnic Dress",
+            brand:"High Star",
+            price:706,
+            size:"M",
+            category:"Dress",
+            productID:"wom14"},
+
+            {img:"https://images.bewakoof.com/t540/women-shirt-dresses-women-s-full-sleeves-shirt-dresses-300440-1607660736.jpg",
+            name:"Women's Solid Tape Tunic",
+            brand:"High Star",
+            price:688,
+            size:"M",
+            category:"Dress",
+            productID:"wom15"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-printed-puff-sleeves-dress-365148-1638218605-1.jpg",
+            name:"Women's Printed Puff Sleeves Dress",
+            brand:"Kotty",
+            price:449,
+            size:"M",
+            category:"Dress",
+            productID:"wom16"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-black-wide-leg-high-rise-jeans-509266-1654873261-1.jpg",
+            name:"Women's Black Wide Leg High Rise Jeans",
+            brand:"Kotty",
+            price:836,
+            size:"M",
+            category:"Jeans",
+            productID:"wom17"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-blue-high-rise-slim-fit-jeans-509187-1654873935-1.jpg",
+            name:"Women's Blue High Rise Slim Fit Jeans",
+            brand:"Kotty",
+            price:874,
+            size:"M",
+            category:"Jeans",
+            productID:"wom18"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-blue-wide-leg-high-rise-jeans-509279-1654873438-1.jpg",
+            name:"Women's Blue Wide Leg High Rise Jeans",
+            brand:"Kotty",
+            price:920,
+            size:"M",
+            category:"Jeans",
+            productID:"wom19"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-blue-high-rise-relaxed-fit-denim-joggers-509280-1654874123-1.jpg",
+            name:"Women's Blue High Rise Relaxed Fit Denim Joggers",
+            brand:"Kotty",
+            price:960,
+            size:"L",
+            category:"Jeans",
+            productID:"wom20"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-black-straight-fit-jeans-504401-1654689414-1.jpg",
+            name:"Women's Black Straight Fit Jeans",
+            brand:"Kotty",
+            price:899,
+            size:"L",
+            category:"Jeans",
+            productID:"wom21"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-grey-slim-fit-jeans-509148-1654873842-1.jpg",
+            name:"Women's Grey Slim Fit Jeans",
+            brand:"Kotty",
+            price:760,
+            size:"L",
+            category:"Jeans",
+            productID:"wom22"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-black-relaxed-fit-denim-joggers-509271-1654873615-1.jpg",
+            name:"Women's Black Relaxed Fit Denim Joggers",
+            brand:"Kotty",
+            price:1002,
+            size:"L",
+            category:"Jeans",
+            productID:"wom23"},
+
+            {img:"https://images.bewakoof.com/t540/women-s-blue-slim-fit-jeans-509227-1654873623-1.jpg",
+            name:"Women's Blue Slim Fit Jeans",
+            brand:"Harpa",
+            price:809,
+            size:"L",
+            category:"Jeans",
+            productID:"wom24"},
+
+            {img:"https://images.bewakoof.com/t540/black-patch-pocket-pants-443127-1645522971-1.jpg",
+            name:"Black Patch Pocket Pants",
+            brand:"High Star",
+            price:549,
+            size:"XL",
+            category:"Casual Pants",
+            productID:"wom25"},
+
+            {img:"https://images.bewakoof.com/t540/dillinger-women-s-maroon-typographic-wide-leg-pants-casual-pants-422524-1635323366.jpg",
+            name:"Women's Maroon Solid Wide Leg Pants",
+            brand:"Bewakoof",
+            price:854,
+            size:"XL",
+            category:"Casual Pants",
+            productID:"wom26"},
+
+    ];
+    
+
+    let displaydatawomen=JSON.parse(localStorage.getItem("displayitemwomen")) || []
+
+
+    let productsCont = document.getElementById("products");
+
+    let sortCatg=document.getElementById("filter");
+
+    let sortBrd=document.getElementById("brandFilter");
+
+    let sortSize=document.getElementById("sizeFilter");
+    
+
+    function displayProducts(womensData){
+        productsCont.innerHTML="";
+        womensData.forEach(function(element){
+            let product=document.createElement("div");
+
+      
+            product.addEventListener("click",function(){
+                displayfunwomen(element)
+            })
+
+
+            let img=document.createElement("img");
+            img.src=element.img;
+            let name=document.createElement("h2");
+            name.innerText=element.brand;
+            let category=document.createElement("p");
+            category.innerText=element.name;
+            let price=document.createElement("h4");
+            price.innerText="₹"+element.price;
+
+            
+            product.append(img,name,category,price);
+            productsCont.append(product);
+        })
+    }
+
+
+    function displayfunwomen (element){
+    event.target
+    console.log(element)
+    displaydatawomen.push(element)
+    localStorage.setItem("displayitemwomen",JSON.stringify(displaydatawomen))
+    window.location.href="womendisplay.html"
+}
+
+
+
+
+    displayProducts(womensData);
+
+    //[Function for Sort by category-]
+    sortCatg.addEventListener("change",function(){
+        if(sortCatg.value==="All"){
+            displayProducts(womensData);
+        }else{
+            let filtered=womensData.filter(function(element){
+                return element.category===sortCatg.value;
+            })
+            displayProducts(filtered);
+        }
+    })
+    //[Function for Sort by Brand-]
+    sortBrd.addEventListener("change",function(){
+        if(sortBrd.value==="Brand"){
+            displayProducts(womensData);
+        }
+        else
+        {
+            let filteredBr=womensData.filter(function(element){
+                return element.brand===sortBrd.value;
+            })
+            displayProducts(filteredBr);
+        }
+    })
+    //[Function for Sort by Size-]
+    sortSize.addEventListener("change",function(){
+        if(sortSize.value==="Size"){
+            displayProducts(womensData);
+        }
+        else
+        {
+            let filteredSz=womensData.filter(function(element){
+                return element.size===sortSize.value;
+            })
+            displayProducts(filteredSz);
+        }
+    })
+    
+</script>
